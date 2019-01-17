@@ -57,7 +57,9 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 		
 		try 
 		{
-			test.fail("Screen Shot : " + test.addScreenCaptureFromPath(TestUtil.captureScreenshot()));			
+			test.fail("Screen Shot : " + test.addScreenCaptureFromPath(TestUtil.captureScreenshot()));
+			
+			Reporter.log("<a target=\"_blank\" href="+TestUtil.captureScreenshot()+">Screenshot</a>");
 		} 
 		catch (IOException e)
 		{
@@ -88,9 +90,10 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 		test.log(Status.PASS, result.getName().toString().toUpperCase()+"Passed");
 		try 
 		{
-			Date d=new Date();
+			//Date d=new Date();
 			test.pass("Screen Shot : " + test.addScreenCaptureFromPath(TestUtil.captureScreenshot()));
-			Reporter.log("<a target=\"_blank\" href="+TestUtil.captureScreenshot()+d.toString().replace(":", "_").replace(" ", "_")+".jpg"+">Screenshot</a>");
+			Reporter.log("<a target=\"_blank\" href=\""+TestUtil.captureScreenshot()+"\">Screenshot</a>");
+			System.out.println("<a target=\"_blank\" href=\""+TestUtil.captureScreenshot()+"\">Screenshot</a>");
 		} 
 		catch (IOException e) 
 		{

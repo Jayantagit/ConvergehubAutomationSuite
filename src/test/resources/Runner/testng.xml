@@ -5,14 +5,10 @@
        <listener class-name="com.ConvergeHub.Listeners.CustomListeners"/>
   </listeners>
   <test thread-count="5" name="Lead Test Cases">
-   <groups>
-            <run>
-                <include name="Regression" />
-            </run>
-        </groups>  	
   <classes>
       <class name="com.ConvergeHub.TestCases.TC_AddLead"/>
+      <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
+      <class name="com.ConvergeHub.TestCases.TC_AddCommentToLead"/>
   </classes>
-  
   </test> <!-- Test -->
 </suite> <!-- Suite -->

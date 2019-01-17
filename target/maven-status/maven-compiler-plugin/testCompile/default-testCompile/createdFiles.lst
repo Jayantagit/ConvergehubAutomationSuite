@@ -1,10 +1,12 @@
 com\ConvergeHub\TestCases\TC_AddLead.class
-com\ConvergeHub\Utilities\ExtentManager.class
-com\ConvergeHub\Utilities\ExcelReader.class
 Rough\RoughOther.class
 com\ConvergeHub\Pages\LoginPage.class
+com\ConvergeHub\TestCases\TC_AddCommentToLead.class
+com\ConvergeHub\Pages\LeadPage.class
+com\ConvergeHub\Utilities\ExtentManager.class
+com\ConvergeHub\TestCases\TC_CreateTaskForLead.class
+com\ConvergeHub\Utilities\ExcelReader.class
 com\ConvergeHub\Utilities\TestUtil.class
 Rough\rough.class
 com\ConvergeHub\Listeners\CustomListeners.class
-com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\Base\Base.class
