@@ -1,9 +1,11 @@
 com\ConvergeHub\TestCases\TC_AddLead.class
 Rough\RoughOther.class
+com\ConvergeHub\Pages\DealPage.class
 com\ConvergeHub\TestCases\TC_ReferLead.class
 com\ConvergeHub\Pages\LoginPage.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
+com\ConvergeHub\TestCases\TC_AdvanceSearch.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\TestCases\TC_CreateTaskForLead.class
 com\ConvergeHub\Utilities\ExcelReader.class

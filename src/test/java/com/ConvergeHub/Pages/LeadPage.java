@@ -32,7 +32,7 @@ public class LeadPage extends Base
 	@FindBy(xpath="//textarea[@id='description']") public WebElement NotesDescription;
 	@FindBy(id="customFieldsValidation") public WebElement NotesSaveBtn;
 	
-	//Events
+	//Schedule Events
 	@FindBy(xpath="//input[@name='name']") public WebElement EventSubject;
 	@FindBy(xpath="//textarea[@id='description']") public WebElement EventDescription;
 	
@@ -53,7 +53,16 @@ public class LeadPage extends Base
 	@FindBy(id="select3_maininput") public WebElement ReferTo;
 	@FindBy(xpath="//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']") public WebElement ReferBtnpopup;
 	
-	
+	//Advance Search
+	@FindBy(id="adv-search") public WebElement AdvSearchBtn;
+	@FindBy(id="first_name_adv") public WebElement AdvSearchFirstNm;
+	@FindBy(id="last_name_adv") public WebElement AdvSearchLastNm;
+	@FindBy(id="account_name_adv") public WebElement AdvSearchAcctNm;
+	@FindBy(id="lead_source_field") public WebElement AdvSearchLeadSrc;
+	@FindBy(id="status_field") public WebElement AdvSearchStatus;
+	@FindBy(id="industry_field") public WebElement AdvSearchIndustry;
+	@FindBy(id="type_field") public WebElement AdvSearchLeadType;
+	@FindBy(xpath="//div[@class='advanced-search-panel']/ul[4]/li[1]/a[@class='button fresh_green']") public WebElement AdvSearchButton;
 	
 	public LeadPage() 
 	{

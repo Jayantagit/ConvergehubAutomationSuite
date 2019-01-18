@@ -6,12 +6,14 @@
   </listeners>
   <test thread-count="5" name="Lead Test Cases">
   <classes>
+   <!--Lead Test Cases -->
       <class name="com.ConvergeHub.TestCases.TC_AddLead"/>
       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToLead"/>
       <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent"/>
       <class name="com.ConvergeHub.TestCases.TC_AddLead_QuickView"/>
       <class name="com.ConvergeHub.TestCases.TC_ReferLead"/>
+      <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/> 
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
