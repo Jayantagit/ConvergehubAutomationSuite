@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeadPage extends Base
 {
+	//Create Lead
 	@FindBy(id="salutation_select_drp_dwn") public WebElement Salutation;
 	@FindBy(id="first_name") public WebElement FirstName;
 	@FindBy(id="last_name") public WebElement LasttName;
@@ -63,6 +64,13 @@ public class LeadPage extends Base
 	@FindBy(id="industry_field") public WebElement AdvSearchIndustry;
 	@FindBy(id="type_field") public WebElement AdvSearchLeadType;
 	@FindBy(xpath="//div[@class='advanced-search-panel']/ul[4]/li[1]/a[@class='button fresh_green']") public WebElement AdvSearchButton;
+	
+	//Edit Lead
+	@FindBy(id="Edit") public WebElement EditIcon;
+	
+	//Edit Lead
+	@FindBy(id="Searchtxt") public WebElement BasicSearchTxt;
+	@FindBy(xpath="(//a[contains(text(),'Go')])[2]") public WebElement Gobtn;
 	
 	public LeadPage() 
 	{
