@@ -72,6 +72,19 @@ public class LeadPage extends Base
 	@FindBy(id="Searchtxt") public WebElement BasicSearchTxt;
 	@FindBy(xpath="(//a[contains(text(),'Go')])[2]") public WebElement Gobtn;
 	
+	//Mass Update
+	@FindBy(id="action_html") public WebElement Actiondropdown;
+	@FindBy(id="domfield_lead_source_select_drp_dwn") public WebElement MassUpdLeadSource;//Select
+	@FindBy(id="domfield_status_select_drp_dwn") public WebElement MassUpdLeadStatus;//Select
+	@FindBy(id="domfield_industry_select_drp_dwn") public WebElement MassUpdLeadIndustry;//Select
+	@FindBy(id="sales_process_select_drp_dwn") public WebElement MassUpdSalesProcess;//Select
+	@FindBy(xpath="//input[@id='mass_text_con_1']") public WebElement MassUpdDepartment;
+	@FindBy(xpath="//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']") public WebElement MassUpdSave;
+	@FindBy(id="ui-dialog-title-common_popup_above_popup") public WebElement MassUpdConfirmation;//Popup-Mass Update Confirmation
+	//@FindBy(xpath="(//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'])[2]") public WebElement MassUpdUpdateBtn;//Update button
+	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']/div[3]/div[1]/button[1]/span[contains(text(),'Update')]") public WebElement MassUpdUpdateBtn;//Update button
+	@FindBy(id="header_notification_msg") public WebElement HeaderNotificationMsg;
+	
 	public LeadPage() 
 	{
 		PageFactory.initElements(driver, this);

@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34514" started-at="2019-01-18T10:44:15Z" finished-at="2019-01-18T10:44:49Z">
+  <suite name="Default suite" duration-ms="51124" started-at="2019-01-19T05:47:38Z" finished-at="2019-01-19T05:48:29Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_BasicSearch.BasicSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_BasicSearch@55040f2f]" name="BasicSearch" class="com.ConvergeHub.TestCases.TC_BasicSearch"/>
+        <method signature="TC_MassUpdateForLead.MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="MassUpdateforlead" class="com.ConvergeHub.TestCases.TC_MassUpdateForLead"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="34514" started-at="2019-01-18T10:44:15Z" finished-at="2019-01-18T10:44:49Z">
-      <class name="com.ConvergeHub.TestCases.TC_BasicSearch">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_BasicSearch@55040f2f]" name="setUp" is-config="true" duration-ms="8919" started-at="2019-01-18T10:44:06Z" finished-at="2019-01-18T10:44:15Z">
+    <test name="Default test" duration-ms="51124" started-at="2019-01-19T05:47:38Z" finished-at="2019-01-19T05:48:29Z">
+      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="setUp" is-config="true" duration-ms="13216" started-at="2019-01-19T05:47:25Z" finished-at="2019-01-19T05:47:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BasicSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_BasicSearch@55040f2f]" name="BasicSearch" duration-ms="34486" started-at="2019-01-18T10:44:15Z" description="Basic Search" finished-at="2019-01-18T10:44:49Z">
+        <test-method status="PASS" signature="MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="MassUpdateforlead" duration-ms="51087" started-at="2019-01-19T05:47:38Z" description="Mass Update for Lead" finished-at="2019-01-19T05:48:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BasicSearch -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_BasicSearch@55040f2f]" name="TearDown" is-config="true" duration-ms="3305" started-at="2019-01-18T10:44:49Z" finished-at="2019-01-18T10:44:53Z">
+        </test-method> <!-- MassUpdateforlead -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="TearDown" is-config="true" duration-ms="3775" started-at="2019-01-19T05:48:29Z" finished-at="2019-01-19T05:48:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_BasicSearch -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_MassUpdateForLead -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
