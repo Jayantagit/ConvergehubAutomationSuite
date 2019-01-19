@@ -98,6 +98,9 @@ public class LeadPage extends Base
 	@FindBy(id="comment_text") public WebElement ConvertLeadComment;
 	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']/div[3]/div[1]/button[1]/span[contains(text(),'Convert')]") public WebElement ConvertLeadConvertBtn;
 	
+	//Merge Duplicate
+	@FindBy(id="merge_save_records") public WebElement MergeSaveRecord;
+	
 	public LeadPage() 
 	{
 		PageFactory.initElements(driver, this);

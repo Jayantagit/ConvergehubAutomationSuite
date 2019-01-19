@@ -1,5 +1,6 @@
 com\ConvergeHub\TestCases\TC_AddLead.class
 com\ConvergeHub\TestCases\TC_EditLead.class
+com\ConvergeHub\TestCases\TC_MergeDuplicate.class
 Rough\RoughOther.class
 com\ConvergeHub\Pages\DealPage.class
 com\ConvergeHub\TestCases\TC_ReferLead.class

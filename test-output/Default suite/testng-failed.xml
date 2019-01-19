@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ConvergeHub.TestCases.TC_ConvertLead">
+      <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate">
         <methods>
           <include name="TearDown"/>
-          <include name="Convertlead"/>
+          <include name="MergeLeads"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ConvergeHub.TestCases.TC_ConvertLead -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_MergeDuplicate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
