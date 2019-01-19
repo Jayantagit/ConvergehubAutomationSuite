@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead">
+      <class name="com.ConvergeHub.TestCases.TC_ConvertLead">
         <methods>
           <include name="TearDown"/>
-          <include name="MassUpdateforlead"/>
+          <include name="Convertlead"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ConvergeHub.TestCases.TC_MassUpdateForLead -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_ConvertLead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

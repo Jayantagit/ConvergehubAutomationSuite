@@ -7,6 +7,7 @@ com\ConvergeHub\Pages\LoginPage.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
 com\ConvergeHub\TestCases\TC_BasicSearch.class
+com\ConvergeHub\TestCases\TC_ConvertLead.class
 com\ConvergeHub\TestCases\TC_AdvanceSearch.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\TestCases\TC_CreateTaskForLead.class

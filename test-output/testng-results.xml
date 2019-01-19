@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51124" started-at="2019-01-19T05:47:38Z" finished-at="2019-01-19T05:48:29Z">
+  <suite name="Default suite" duration-ms="68707" started-at="2019-01-19T09:35:49Z" finished-at="2019-01-19T09:36:58Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_MassUpdateForLead.MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="MassUpdateforlead" class="com.ConvergeHub.TestCases.TC_MassUpdateForLead"/>
+        <method signature="TC_ConvertLead.Convertlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_ConvertLead@55040f2f]" name="Convertlead" class="com.ConvergeHub.TestCases.TC_ConvertLead"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="51124" started-at="2019-01-19T05:47:38Z" finished-at="2019-01-19T05:48:29Z">
-      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="setUp" is-config="true" duration-ms="13216" started-at="2019-01-19T05:47:25Z" finished-at="2019-01-19T05:47:38Z">
+    <test name="Default test" duration-ms="68707" started-at="2019-01-19T09:35:49Z" finished-at="2019-01-19T09:36:58Z">
+      <class name="com.ConvergeHub.TestCases.TC_ConvertLead">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_ConvertLead@55040f2f]" name="setUp" is-config="true" duration-ms="11937" started-at="2019-01-19T09:35:37Z" finished-at="2019-01-19T09:35:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="MassUpdateforlead" duration-ms="51087" started-at="2019-01-19T05:47:38Z" description="Mass Update for Lead" finished-at="2019-01-19T05:48:29Z">
+        <test-method status="PASS" signature="Convertlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_ConvertLead@55040f2f]" name="Convertlead" duration-ms="68676" started-at="2019-01-19T09:35:49Z" description="Converting a Lead" finished-at="2019-01-19T09:36:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MassUpdateforlead -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForLead@55040f2f]" name="TearDown" is-config="true" duration-ms="3775" started-at="2019-01-19T05:48:29Z" finished-at="2019-01-19T05:48:33Z">
+        </test-method> <!-- Convertlead -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_ConvertLead@55040f2f]" name="TearDown" is-config="true" duration-ms="3797" started-at="2019-01-19T09:36:58Z" finished-at="2019-01-19T09:37:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_MassUpdateForLead -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_ConvertLead -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

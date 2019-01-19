@@ -85,6 +85,19 @@ public class LeadPage extends Base
 	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']/div[3]/div[1]/button[1]/span[contains(text(),'Update')]") public WebElement MassUpdUpdateBtn;//Update button
 	@FindBy(id="header_notification_msg") public WebElement HeaderNotificationMsg;
 	
+	//Convert Lead
+	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']") public WebElement ConvertLeadPopup;
+	@FindBy(id="account_account_name") public WebElement ConvertLeadAcctName;
+	@FindBy(id="create_contact") public WebElement ConvertLeadCreateContact;
+	@FindBy(id="contact_first_name") public WebElement ConvertLeadContactFirstNm;
+	@FindBy(id="contact_last_name") public WebElement ConvertLeadContactLastNm;
+	@FindBy(id="emailAddress1") public WebElement ConvertLeadContactEmail;
+	@FindBy(id="create_deal") public WebElement ConvertLeadCreateDeal;
+	@FindBy(id="deal_name") public WebElement ConvertLeadDealName;
+	@FindBy(id="deal_estimated_amount") public WebElement ConvertLeadDealEstimatedAmt;
+	@FindBy(id="comment_text") public WebElement ConvertLeadComment;
+	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']/div[3]/div[1]/button[1]/span[contains(text(),'Convert')]") public WebElement ConvertLeadConvertBtn;
+	
 	public LeadPage() 
 	{
 		PageFactory.initElements(driver, this);

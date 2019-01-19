@@ -57,7 +57,7 @@ public class TC_AddLead extends Base
 	   lead.EmailAddress.sendKeys("ABSC@mailinator.com");
 	   lead.LeadSave.click();
 	    
-	    
+	    //Assertion statement to be added for the verification
 	    
 	
 	}

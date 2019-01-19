@@ -9,6 +9,7 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Ed
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Listeners\CustomListeners.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddLead_QuickView.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExtentManager.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ConvertLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExcelReader.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\LeadPage.java
