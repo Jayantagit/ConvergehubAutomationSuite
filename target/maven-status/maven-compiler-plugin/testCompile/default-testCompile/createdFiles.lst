@@ -15,5 +15,6 @@ com\ConvergeHub\Utilities\TestUtil.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
 Rough\rough.class
 com\ConvergeHub\Listeners\CustomListeners.class
+com\ConvergeHub\TestCases\TC_MassUpdateForLead.class
 com\ConvergeHub\Base\Base.class
 com\ConvergeHub\TestCases\TC_AddLead_QuickView.class

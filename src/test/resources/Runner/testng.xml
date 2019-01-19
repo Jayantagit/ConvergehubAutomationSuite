@@ -16,7 +16,7 @@
       <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/> 
       <class name="com.ConvergeHub.TestCases.TC_EditLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_BasicSearch"/> 
-      <class name="com.ConvergeHub.TestCases.MassUpdateforlead"/> 
+      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead"/> 
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
