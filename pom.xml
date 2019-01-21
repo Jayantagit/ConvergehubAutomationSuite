@@ -92,7 +92,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<configuration>
 					  <testFailureIgnore>true</testFailureIgnore>
 					  <reuseForks>true</reuseForks>
-					  <useSystemClassLoader>false</useSystemClassLoader>				  			 
+					  <useSystemClassLoader>false</useSystemClassLoader>					  				  		  			 
 					 <suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/Runner/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>

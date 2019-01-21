@@ -41,6 +41,8 @@
  <classes> 
   <!--Contact Test Cases      -->   
        <class name="com.ConvergeHub.TestCases.TC_AddContacts"/>  
+       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForContact"/> 
+       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToContact"/> 
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
