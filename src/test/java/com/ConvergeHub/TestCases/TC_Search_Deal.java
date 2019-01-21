@@ -20,11 +20,11 @@ import com.ConvergeHub.Pages.LeadPage;
 import com.ConvergeHub.Pages.LoginPage;
 
 
-public class TC_AdvanceSearch_Deal extends Base  
+public class TC_Search_Deal extends Base  
 {    
-	@Test(groups={"Regression"},description="Advance Search for Lead")
+	@Test(groups={"Smoke"},description="Advance Search for Lead")
 	
-	public static void AdvanceSearch() throws InterruptedException
+	public static void DealAdvanceSearch() throws InterruptedException
 	{
 		LeadPage lead=new LeadPage();
 		DealPage deal=new DealPage();
@@ -107,6 +107,53 @@ public class TC_AdvanceSearch_Deal extends Base
 	    catch(Exception e)
 	    {
 	    	System.out.println("No Deal found for the Search");  
+	    	e.printStackTrace();
+	    	
+	    }
+	    
+
+	    //Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Event Relation Added");//Validation Step-Event Schedule added successfully
+	    
+	}
+	
+@Test(groups={"Regression"},description="Basic Search")
+	
+	public static void DealBasicSearch() throws InterruptedException
+	{
+		LeadPage lead=new LeadPage();
+		DealPage deal=new DealPage();
+		
+	   	//Navigate to the Deal Page  
+	    driver.get("https://staging.convergehub.com/deals/");
+	    
+	  //Clear the Search field and Enter the Search Text for Quick Search
+        deal.SrchQuiclSearch.clear();
+        String quiclsearchVal=excel.GetCellData("Deal", 1 ,8);
+        deal.SrchQuiclSearch.sendKeys(quiclsearchVal);
+	    
+	    //Click the Go button
+	    lead.Gobtn.click();
+	    WebDriverWait wait = new WebDriverWait (driver, 20);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Current Search:')]")));
+	     
+	    
+	    try
+	    {
+	        List<WebElement> deals_num=driver.findElements(By.xpath("//input[@class='list_checkbox']"));
+	          
+	        if(deals_num.size()>0)
+	        {
+	        	System.out.println("Basic Search return result  :"+deals_num.size());  
+	        }
+	        else
+	        {
+	        	System.out.println("No deals found for the selected search criteras for Quick search");  
+	        }
+	       	    	
+	    }
+	    catch(Exception e)
+	    {
+	    	System.out.println("No deals found for the Search");  
 	    	e.printStackTrace();
 	    	
 	    }

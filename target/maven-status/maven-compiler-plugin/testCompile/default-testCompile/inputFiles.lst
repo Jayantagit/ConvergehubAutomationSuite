@@ -1,4 +1,3 @@
-D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AdvanceSearch_Deal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_BasicSearch.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddDeal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_MassUpdateForLead.java
@@ -9,6 +8,7 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Ed
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Listeners\CustomListeners.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddLead_QuickView.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ConvertLead.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Search_Deal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\LeadPage.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\TestUtil.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.java

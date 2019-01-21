@@ -11,10 +11,10 @@ com\ConvergeHub\Utilities\ExcelReader.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.class
 com\ConvergeHub\Utilities\TestUtil.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
-com\ConvergeHub\TestCases\TC_AdvanceSearch_Deal.class
 com\ConvergeHub\Base\Base.class
 com\ConvergeHub\TestCases\TC_AddLead_QuickView.class
 Rough\RoughOther.class
+com\ConvergeHub\TestCases\TC_Search_Deal.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
