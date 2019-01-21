@@ -18,6 +18,9 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Cr
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ReferLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddLead.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_MassUpdateForDeal.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddContacts.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\ContactPage.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExtentManager.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExcelReader.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForLead.java

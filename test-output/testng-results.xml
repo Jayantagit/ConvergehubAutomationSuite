@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36404" started-at="2019-01-21T11:48:28Z" finished-at="2019-01-21T11:49:04Z">
+  <suite name="Default suite" duration-ms="46195" started-at="2019-01-21T12:38:30Z" finished-at="2019-01-21T12:39:16Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_MassUpdateForDeal.MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="MassUpdateforlead" class="com.ConvergeHub.TestCases.TC_MassUpdateForDeal"/>
+        <method signature="TC_AddContacts.ContactCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="ContactCreation" class="com.ConvergeHub.TestCases.TC_AddContacts"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="36404" started-at="2019-01-21T11:48:28Z" finished-at="2019-01-21T11:49:04Z">
-      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForDeal">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="setUp" is-config="true" duration-ms="9984" started-at="2019-01-21T11:48:18Z" finished-at="2019-01-21T11:48:28Z">
+    <test name="Default test" duration-ms="46195" started-at="2019-01-21T12:38:30Z" finished-at="2019-01-21T12:39:16Z">
+      <class name="com.ConvergeHub.TestCases.TC_AddContacts">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="setUp" is-config="true" duration-ms="8948" started-at="2019-01-21T12:38:21Z" finished-at="2019-01-21T12:38:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="MassUpdateforlead" duration-ms="36264" started-at="2019-01-21T11:48:28Z" description="Mass Update for Deal" finished-at="2019-01-21T11:49:04Z">
+        <test-method status="PASS" signature="ContactCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="ContactCreation" duration-ms="46039" started-at="2019-01-21T12:38:30Z" description="Create a New Contact Manually" finished-at="2019-01-21T12:39:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MassUpdateforlead -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="TearDown" is-config="true" duration-ms="3153" started-at="2019-01-21T11:49:04Z" finished-at="2019-01-21T11:49:07Z">
+        </test-method> <!-- ContactCreation -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="TearDown" is-config="true" duration-ms="2902" started-at="2019-01-21T12:39:16Z" finished-at="2019-01-21T12:39:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_MassUpdateForDeal -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AddContacts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
