@@ -31,7 +31,8 @@
        <class name="com.ConvergeHub.TestCases.TC_CreateTaskForDeal"/> 
        <class name="com.ConvergeHub.TestCases.TC_Add_Comment_NoteToDeal"/>
        <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Deal"/>
-       <class name="com.ConvergeHub.TestCases.TC_Search_Deal"/>   
+       <class name="com.ConvergeHub.TestCases.TC_Search_Deal"/>  
+       <class name="com.ConvergeHub.TestCases.TC_MassUpdateForDeal"/>   
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

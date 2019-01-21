@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33259" started-at="2019-01-21T07:25:49Z" finished-at="2019-01-21T07:26:22Z">
+  <suite name="Default suite" duration-ms="36404" started-at="2019-01-21T11:48:28Z" finished-at="2019-01-21T11:49:04Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_AdvanceSearch_Deal.AdvanceSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="AdvanceSearch" class="com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal"/>
+        <method signature="TC_MassUpdateForDeal.MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="MassUpdateforlead" class="com.ConvergeHub.TestCases.TC_MassUpdateForDeal"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="33259" started-at="2019-01-21T07:25:49Z" finished-at="2019-01-21T07:26:22Z">
-      <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="setUp" is-config="true" duration-ms="9385" started-at="2019-01-21T07:25:40Z" finished-at="2019-01-21T07:25:49Z">
+    <test name="Default test" duration-ms="36404" started-at="2019-01-21T11:48:28Z" finished-at="2019-01-21T11:49:04Z">
+      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForDeal">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="setUp" is-config="true" duration-ms="9984" started-at="2019-01-21T11:48:18Z" finished-at="2019-01-21T11:48:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="AdvanceSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="AdvanceSearch" duration-ms="33116" started-at="2019-01-21T07:25:49Z" description="Advance Search for Lead" finished-at="2019-01-21T07:26:22Z">
+        <test-method status="PASS" signature="MassUpdateforlead()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="MassUpdateforlead" duration-ms="36264" started-at="2019-01-21T11:48:28Z" description="Mass Update for Deal" finished-at="2019-01-21T11:49:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AdvanceSearch -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="TearDown" is-config="true" duration-ms="3643" started-at="2019-01-21T07:26:22Z" finished-at="2019-01-21T07:26:26Z">
+        </test-method> <!-- MassUpdateforlead -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_MassUpdateForDeal@3a93b025]" name="TearDown" is-config="true" duration-ms="3153" started-at="2019-01-21T11:49:04Z" finished-at="2019-01-21T11:49:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_MassUpdateForDeal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

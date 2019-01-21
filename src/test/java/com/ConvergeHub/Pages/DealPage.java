@@ -31,6 +31,11 @@ public class DealPage extends Base
 	@FindBy(id="sales_stage_field") public WebElement SrchSalesStage;
 	@FindBy(id="Searchtxt") public WebElement SrchQuiclSearch;
 	
+	//MassUpdate
+	@FindBy(id="domfield_deal_type_select_drp_dwn") public WebElement MassUpdDealType;   //Select Clause
+	@FindBy(id="domfield_lead_source_select_drp_dwn") public WebElement MassUpdLeadSource;   //Select Clause
+	@FindBy(id="domfield_sales_stage_select_drp_dwn") public WebElement MassUpdSalesStage;   //Select Clause
+	
 	
 	public DealPage() 
 	{
