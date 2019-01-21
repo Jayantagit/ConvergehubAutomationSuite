@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate">
+      <class name="com.ConvergeHub.TestCases.TC_AddDeal">
         <methods>
           <include name="TearDown"/>
-          <include name="MergeLeads"/>
+          <include name="LeadCreation"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ConvergeHub.TestCases.TC_MergeDuplicate -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AddDeal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

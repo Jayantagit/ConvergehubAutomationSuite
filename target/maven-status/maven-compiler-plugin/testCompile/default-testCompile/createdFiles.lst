@@ -15,6 +15,7 @@ com\ConvergeHub\TestCases\TC_CreateTaskForLead.class
 com\ConvergeHub\Utilities\ExcelReader.class
 com\ConvergeHub\Utilities\TestUtil.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
+com\ConvergeHub\TestCases\TC_AddDeal.class
 Rough\rough.class
 com\ConvergeHub\Listeners\CustomListeners.class
 com\ConvergeHub\TestCases\TC_MassUpdateForLead.class

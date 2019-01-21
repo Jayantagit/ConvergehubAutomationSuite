@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52511" started-at="2019-01-19T10:30:48Z" finished-at="2019-01-19T10:31:40Z">
+  <suite name="Default suite" duration-ms="35270" started-at="2019-01-19T13:44:01Z" finished-at="2019-01-19T13:44:36Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_MergeDuplicate.MergeLeads()[pri:0, instance:com.ConvergeHub.TestCases.TC_MergeDuplicate@55040f2f]" name="MergeLeads" class="com.ConvergeHub.TestCases.TC_MergeDuplicate"/>
+        <method signature="TC_AddDeal.LeadCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="LeadCreation" class="com.ConvergeHub.TestCases.TC_AddDeal"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="52511" started-at="2019-01-19T10:30:48Z" finished-at="2019-01-19T10:31:40Z">
-      <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_MergeDuplicate@55040f2f]" name="setUp" is-config="true" duration-ms="11409" started-at="2019-01-19T10:30:36Z" finished-at="2019-01-19T10:30:48Z">
+    <test name="Default test" duration-ms="35270" started-at="2019-01-19T13:44:01Z" finished-at="2019-01-19T13:44:36Z">
+      <class name="com.ConvergeHub.TestCases.TC_AddDeal">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="setUp" is-config="true" duration-ms="9673" started-at="2019-01-19T13:43:51Z" finished-at="2019-01-19T13:44:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="MergeLeads()[pri:0, instance:com.ConvergeHub.TestCases.TC_MergeDuplicate@55040f2f]" name="MergeLeads" duration-ms="52477" started-at="2019-01-19T10:30:48Z" description="Merge Duplicates" finished-at="2019-01-19T10:31:40Z">
+        <test-method status="PASS" signature="LeadCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="LeadCreation" duration-ms="35222" started-at="2019-01-19T13:44:01Z" description="Create New Lead" finished-at="2019-01-19T13:44:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MergeLeads -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_MergeDuplicate@55040f2f]" name="TearDown" is-config="true" duration-ms="3375" started-at="2019-01-19T10:31:40Z" finished-at="2019-01-19T10:31:43Z">
+        </test-method> <!-- LeadCreation -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="TearDown" is-config="true" duration-ms="3597" started-at="2019-01-19T13:44:36Z" finished-at="2019-01-19T13:44:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_MergeDuplicate -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AddDeal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

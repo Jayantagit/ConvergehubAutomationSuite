@@ -36,7 +36,7 @@ public class Base
 	 public static String browser;
 	  
 	 public static Logger log=Logger.getLogger("rootLogger");
-	 public static ExcelReader excel=new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\TestData.ods");
+	 public static ExcelReader excel=new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\TestData.xls");
 	 
 	 public static ExtentReports rep=ExtentManager.getInstance();
 	 public static ExtentTest test;

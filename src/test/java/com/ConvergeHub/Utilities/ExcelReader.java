@@ -3,6 +3,10 @@ package com.ConvergeHub.Utilities;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -13,10 +17,16 @@ public class ExcelReader
 	public String path;
 	public FileInputStream fis=null;
 	public FileOutputStream fileout=null;
+	/*
 	private XSSFWorkbook workbook=null;
 	private XSSFSheet sheet=null;
 	private XSSFRow row=null;
-	private XSSFCell cell=null;
+	private XSSFCell cell=null;*/
+	
+	private HSSFWorkbook workbook=null;
+	private HSSFSheet sheet=null;
+	private HSSFRow row=null;
+	private HSSFCell cell=null;
 	
 	public ExcelReader(String path)
 	{
@@ -24,7 +34,7 @@ public class ExcelReader
 		try
 		{
 			fis=new FileInputStream(path);
-			workbook=new XSSFWorkbook(fis);
+			workbook=new HSSFWorkbook(fis);
 			sheet=workbook.getSheetAt(0);
 			fis.close();
 		}
