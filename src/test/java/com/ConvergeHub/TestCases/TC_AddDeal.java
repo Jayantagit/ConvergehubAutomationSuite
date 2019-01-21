@@ -45,7 +45,7 @@ public class TC_AddDeal extends Base
 	    String DealType=excel.GetCellData("Deal", 1, 1);
 	    new Select(deal.DealType).selectByVisibleText(DealType);
 	    
-	  //------Select the First Account Name in the dropdown list
+	  //------Select the First Account Name in the Dropdown list
 	    deal.DealAccountNm.click();
 	    WebDriverWait wait = new WebDriverWait (driver, 20);
 	    wait.until(ExpectedConditions.visibilityOf(deal.DealAccountNmFirst));

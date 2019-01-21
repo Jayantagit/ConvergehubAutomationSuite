@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35270" started-at="2019-01-19T13:44:01Z" finished-at="2019-01-19T13:44:36Z">
+  <suite name="Default suite" duration-ms="33259" started-at="2019-01-21T07:25:49Z" finished-at="2019-01-21T07:26:22Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_AddDeal.LeadCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="LeadCreation" class="com.ConvergeHub.TestCases.TC_AddDeal"/>
+        <method signature="TC_AdvanceSearch_Deal.AdvanceSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="AdvanceSearch" class="com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="35270" started-at="2019-01-19T13:44:01Z" finished-at="2019-01-19T13:44:36Z">
-      <class name="com.ConvergeHub.TestCases.TC_AddDeal">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="setUp" is-config="true" duration-ms="9673" started-at="2019-01-19T13:43:51Z" finished-at="2019-01-19T13:44:01Z">
+    <test name="Default test" duration-ms="33259" started-at="2019-01-21T07:25:49Z" finished-at="2019-01-21T07:26:22Z">
+      <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="setUp" is-config="true" duration-ms="9385" started-at="2019-01-21T07:25:40Z" finished-at="2019-01-21T07:25:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LeadCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="LeadCreation" duration-ms="35222" started-at="2019-01-19T13:44:01Z" description="Create New Lead" finished-at="2019-01-19T13:44:36Z">
+        <test-method status="PASS" signature="AdvanceSearch()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="AdvanceSearch" duration-ms="33116" started-at="2019-01-21T07:25:49Z" description="Advance Search for Lead" finished-at="2019-01-21T07:26:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LeadCreation -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddDeal@55040f2f]" name="TearDown" is-config="true" duration-ms="3597" started-at="2019-01-19T13:44:36Z" finished-at="2019-01-19T13:44:40Z">
+        </test-method> <!-- AdvanceSearch -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal@3a93b025]" name="TearDown" is-config="true" duration-ms="3643" started-at="2019-01-21T07:26:22Z" finished-at="2019-01-21T07:26:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_AddDeal -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

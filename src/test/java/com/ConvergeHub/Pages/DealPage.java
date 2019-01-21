@@ -21,6 +21,15 @@ public class DealPage extends Base
 	@FindBy(xpath="//button[@id='accountValidation' and @type='submit']") public WebElement DealSaveBtn;
 	@FindBy(id="header_notification_msg") public WebElement SuccessNotificationMsg;
 	
+	//Advanced Search
+	@FindBy(id="adv-search") public WebElement AdvSearchBtn;
+	@FindBy(id="name_adv") public WebElement SrchName;
+	@FindBy(id="account_id_relate_adv_field") public WebElement SrchAcctName;
+	@FindBy(id="//div[@id='alls_tab_account_id_relate_adv']/ul/li[1]") public WebElement FirstAcctName;//Select All
+	@FindBy(id="deal_type_field") public WebElement SrchDealType;
+	@FindBy(id="lead_source_field") public WebElement SrchLeadSource;
+	@FindBy(id="sales_stage_field") public WebElement SrchSalesStage;
+	
 	public DealPage() 
 	{
 		PageFactory.initElements(driver, this);

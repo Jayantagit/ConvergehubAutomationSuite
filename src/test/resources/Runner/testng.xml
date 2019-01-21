@@ -6,7 +6,8 @@
   </listeners>
   <test thread-count="5" name="Lead Test Cases">
   <classes>
-   <!--Lead Test Cases
+  <!--Lead Test Cases      -->
+   <!--
       <class name="com.ConvergeHub.TestCases.TC_AddLead"/>
       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToLead"/>
@@ -20,7 +21,12 @@
       <class name="com.ConvergeHub.TestCases.TC_ConvertLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate"/> 
        -->
+  <!--Deal Test Cases      -->     
        <class name="com.ConvergeHub.TestCases.TC_AddDeal"/> 
+       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForDeal"/> 
+       <class name="com.ConvergeHub.TestCases.TC_Add_Comment_NoteToDeal"/>
+       <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Deal"/>
+        <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch_Deal"/>   
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
