@@ -15,7 +15,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>		
-    <version>6.14.3</version>
+    <version>6.14.3</version>   
     <scope>test</scope>
 </dependency>
 <dependency>
@@ -90,8 +90,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
 				<configuration>
-					  <testFailureIgnore>true</testFailureIgnore>
-					  <useSystemClassLoader>false</useSystemClassLoader>					  				  		  			 
+					   <testFailureIgnore>true</testFailureIgnore>
+					   <useSystemClassLoader>false</useSystemClassLoader>	
+					   				  				  		  			 
 					 <suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/Runner/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>

@@ -98,7 +98,7 @@ public class TC_AddTarget_Convert extends Base
 	    	
 	}
 	
-	@Test(groups={"Regression"},description="Converting a Target to Lead",priority = 1)
+	@Test(groups={"Smoke"},description="Converting a Target to Lead",priority = 1)
 	
 	public static void ConvertTarget() throws InterruptedException
 	{

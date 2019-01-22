@@ -17,6 +17,7 @@ com\ConvergeHub\Utilities\ExcelReader.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.class
 com\ConvergeHub\Utilities\TestUtil.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
+com\ConvergeHub\Pages\AccountPage.class
 com\ConvergeHub\Base\Base.class
 com\ConvergeHub\TestCases\TC_AddLead_QuickView.class
 com\ConvergeHub\Pages\ContactPage.class
@@ -32,4 +33,5 @@ com\ConvergeHub\TestCases\TC_AddDeal.class
 Rough\rough.class
 com\ConvergeHub\Listeners\CustomListeners.class
 com\ConvergeHub\TestCases\TC_MassUpdateForLead.class
+com\ConvergeHub\TestCases\TC_AddAccount_Convert.class
 com\ConvergeHub\TestCases\TC_CreateTaskForDeal.class

@@ -54,9 +54,17 @@
  <test  name="Target Test Cases">
  <classes> 
   <!--Target Test Cases        -->
-  
+  <!--
        <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>  
-     
+  -->    
+  </classes>
+  </test> <!-- Test -->
+  
+ <test  name="Account Test Cases">
+ <classes> 
+  <!--Account Test Cases        -->
+       <class name="com.ConvergeHub.TestCases.TC_AddAccount_Convert"/>  
+       
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
