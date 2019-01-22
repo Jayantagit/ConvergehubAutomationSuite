@@ -63,8 +63,9 @@
  <test  name="Account Test Cases">
  <classes> 
   <!--Account Test Cases        -->
-       <class name="com.ConvergeHub.TestCases.TC_AddAccount_Convert"/>  
-       
+       <class name="com.ConvergeHub.TestCases.TC_AddAccount"/>  
+       <class name="com.ConvergeHub.TestCases.TC_CreateTask_Comments_Notes_ScheduleEvent_ForAccount"/>
+       <class name="com.ConvergeHub.TestCases.TC_DeleteAccount"/>    
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

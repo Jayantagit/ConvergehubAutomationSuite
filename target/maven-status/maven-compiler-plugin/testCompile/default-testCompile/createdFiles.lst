@@ -25,7 +25,9 @@ Rough\RoughOther.class
 com\ConvergeHub\TestCases\TC_Search_Deal.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.class
+com\ConvergeHub\TestCases\TC_DeleteAccount.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
+com\ConvergeHub\TestCases\TC_CreateTask_Comments_Notes_ScheduleEvent_ForAccount.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Contact.class
 com\ConvergeHub\TestCases\TC_AdvanceSearch.class
 com\ConvergeHub\TestCases\TC_CreateTaskForLead.class
@@ -33,5 +35,5 @@ com\ConvergeHub\TestCases\TC_AddDeal.class
 Rough\rough.class
 com\ConvergeHub\Listeners\CustomListeners.class
 com\ConvergeHub\TestCases\TC_MassUpdateForLead.class
-com\ConvergeHub\TestCases\TC_AddAccount_Convert.class
+com\ConvergeHub\TestCases\TC_AddAccount.class
 com\ConvergeHub\TestCases\TC_CreateTaskForDeal.class

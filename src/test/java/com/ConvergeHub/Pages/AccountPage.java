@@ -18,6 +18,10 @@ public class AccountPage extends Base
 	@FindBy(id="emailAddress1") public WebElement acctEmail;//Edit
 	@FindBy(xpath="//button[@id='accountValidation' and @type='submit']") public WebElement acctSaveBtn;
 	
+	//Listing Page
+	@FindBy(xpath="(//span[contains(text(),'Select')])[1]") public WebElement acctSelect;//First select statement in the List
+	@FindBy(xpath="(//input[@name='list_checkbox[]'])[1]") public WebElement acctCheckbox;//First checkbox  in the List
+	@FindBy(xpath="(//a[@title='Mass Delete'])[1]") public WebElement acctMassDelicon;//First MassDelete icon in the List
 	
 	public AccountPage() 
 	{

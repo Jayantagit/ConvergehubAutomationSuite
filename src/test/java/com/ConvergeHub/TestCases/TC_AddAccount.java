@@ -21,7 +21,7 @@ import com.ConvergeHub.Pages.LoginPage;
 import com.ConvergeHub.Pages.TargetPage;
 
 
-public class TC_AddAccount_Convert extends Base  
+public class TC_AddAccount extends Base  
 {    
 	@Test(groups={"Regression"},description="Create a New Account",priority = 0)
 	
