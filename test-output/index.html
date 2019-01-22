@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\sunit\AppData\Local\Temp\testng-eclipse-166373915\testng-customsuite.xml</span>
+                    <span>C:\Users\sunit\AppData\Local\Temp\testng-eclipse--1230504388\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ConvergeHub.TestCases.TC_AddContacts" hash-for-method="ContactCreation">ContactCreation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ConvergeHub.TestCases.TC_AddTarget_Convert" hash-for-method="ConvertTarget">ConvertTarget</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ConvergeHub.TestCases.TC_AddTarget_Convert" hash-for-method="TargetCreation">TargetCreation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,16 +125,25 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ConvergeHub.TestCases.TC_AddContacts</span>
+              <span class="class-name">com.ConvergeHub.TestCases.TC_AddTarget_Convert</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ContactCreation">
-                  </a> <!-- ContactCreation -->
-                  <span class="method-name">ContactCreation</span>
+                  <a name="ConvertTarget">
+                  </a> <!-- ConvertTarget -->
+                  <span class="method-name">ConvertTarget</span>
                   <em>
-(Create a New Contact Manually)                  </em>
+(Converting a Target to Lead)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TargetCreation">
+                  </a> <!-- TargetCreation -->
+                  <span class="method-name">TargetCreation</span>
+                  <em>
+(Create a New Target)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +151,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sunit\AppData\Local\Temp\testng-eclipse-166373915\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\sunit\AppData\Local\Temp\testng-eclipse--1230504388\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,7 +160,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ConvergeHub.TestCases.TC_AddContacts&quot;/&gt;
+      &lt;class name=&quot;com.ConvergeHub.TestCases.TC_AddTarget_Convert&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -174,7 +188,11 @@
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ContactCreation</span>
+                <span class="method-in-group-name">ConvertTarget</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TargetCreation</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -194,16 +212,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ContactCreation')
-data.setCell(0, 2, 'com.ConvergeHub.TestCases.TC_AddContacts')
-data.setCell(0, 3, 46039);
+data.setCell(0, 1, 'TargetCreation')
+data.setCell(0, 2, 'com.ConvergeHub.TestCases.TC_AddTarget_Convert')
+data.setCell(0, 3, 40817);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ConvertTarget')
+data.setCell(1, 2, 'com.ConvergeHub.TestCases.TC_AddTarget_Convert')
+data.setCell(1, 3, 15460);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -229,18 +251,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ConvergeHub.TestCases.TC_AddContacts</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ConvergeHub.TestCases.TC_AddTarget_Convert</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">ContactCreation</span>
-                <span class="method-start">9097 ms</span>
+                <span class="method-name">TargetCreation</span>
+                <span class="method-start">9399 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ConvertTarget</span>
+                <span class="method-start">50222 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">55166 ms</span>
+                <span class="method-start">65710 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

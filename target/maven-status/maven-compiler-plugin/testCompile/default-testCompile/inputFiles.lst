@@ -17,6 +17,7 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Ad
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_MergeDuplicate.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForDeal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddTarget_Convert.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ReferLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_MassUpdateForDeal.java
@@ -24,8 +25,10 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_Ad
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\ContactPage.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExtentManager.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\ExcelReader.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\TargetPage.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForContact.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ScheduleEvent_Contact.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ScheduleEvent.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Base\Base.java

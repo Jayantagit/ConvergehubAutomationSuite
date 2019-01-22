@@ -1,4 +1,5 @@
 com\ConvergeHub\TestCases\TC_AddLead.class
+com\ConvergeHub\Pages\TargetPage.class
 com\ConvergeHub\TestCases\TC_EditLead.class
 com\ConvergeHub\TestCases\TC_MassUpdateForDeal.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate.class
@@ -9,6 +10,7 @@ com\ConvergeHub\TestCases\TC_AddCommentandNoteToContact.class
 com\ConvergeHub\TestCases\TC_AddContacts.class
 com\ConvergeHub\TestCases\TC_BasicSearch.class
 com\ConvergeHub\TestCases\TC_ConvertLead.class
+com\ConvergeHub\TestCases\TC_AddTarget_Convert.class
 com\ConvergeHub\TestCases\TC_CreateTaskForContact.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\Utilities\ExcelReader.class
@@ -23,6 +25,7 @@ com\ConvergeHub\TestCases\TC_Search_Deal.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
+com\ConvergeHub\TestCases\TC_ScheduleEvent_Contact.class
 com\ConvergeHub\TestCases\TC_AdvanceSearch.class
 com\ConvergeHub\TestCases\TC_CreateTaskForLead.class
 com\ConvergeHub\TestCases\TC_AddDeal.class

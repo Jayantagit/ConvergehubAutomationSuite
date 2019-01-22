@@ -23,7 +23,8 @@
       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate"/> 
        -->
    </classes>
-   </test>   
+   </test> 
+     
  <test  name="Deal Test Cases">
  <classes> 
   <!--Deal Test Cases      -->   
@@ -37,12 +38,25 @@
        -->    
   </classes>
   </test> <!-- Test -->
+  
  <test  name="Contact Test Cases">
  <classes> 
-  <!--Contact Test Cases      -->   
+  <!--Contact Test Cases        -->
+   <!--
        <class name="com.ConvergeHub.TestCases.TC_AddContacts"/>  
        <class name="com.ConvergeHub.TestCases.TC_CreateTaskForContact"/> 
        <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToContact"/> 
+       <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Contact"/> 
+  --> 
+  </classes>
+ </test> <!-- Test -->
+ 
+ <test  name="Target Test Cases">
+ <classes> 
+  <!--Target Test Cases        -->
+  
+       <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>  
+     
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

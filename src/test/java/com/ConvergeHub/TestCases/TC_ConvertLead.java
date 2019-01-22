@@ -34,7 +34,7 @@ public class TC_ConvertLead extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
+	   */
 	    
 	    //Navigate to the Lead Page
 	    driver.get("https://staging.convergehub.com/leads");

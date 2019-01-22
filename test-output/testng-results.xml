@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46195" started-at="2019-01-21T12:38:30Z" finished-at="2019-01-21T12:39:16Z">
+  <suite name="Default suite" duration-ms="56458" started-at="2019-01-22T07:05:31Z" finished-at="2019-01-22T07:06:28Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_AddContacts.ContactCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="ContactCreation" class="com.ConvergeHub.TestCases.TC_AddContacts"/>
+        <method signature="TC_AddTarget_Convert.ConvertTarget()[pri:1, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="ConvertTarget" class="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>
+        <method signature="TC_AddTarget_Convert.TargetCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="TargetCreation" class="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="46195" started-at="2019-01-21T12:38:30Z" finished-at="2019-01-21T12:39:16Z">
-      <class name="com.ConvergeHub.TestCases.TC_AddContacts">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="setUp" is-config="true" duration-ms="8948" started-at="2019-01-21T12:38:21Z" finished-at="2019-01-21T12:38:30Z">
+    <test name="Default test" duration-ms="56458" started-at="2019-01-22T07:05:31Z" finished-at="2019-01-22T07:06:28Z">
+      <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="setUp" is-config="true" duration-ms="9227" started-at="2019-01-22T07:05:22Z" finished-at="2019-01-22T07:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="ContactCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="ContactCreation" duration-ms="46039" started-at="2019-01-21T12:38:30Z" description="Create a New Contact Manually" finished-at="2019-01-21T12:39:16Z">
+        <test-method status="PASS" signature="TargetCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="TargetCreation" duration-ms="40817" started-at="2019-01-22T07:05:32Z" description="Create a New Target" finished-at="2019-01-22T07:06:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ContactCreation -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddContacts@3a93b025]" name="TearDown" is-config="true" duration-ms="2902" started-at="2019-01-21T12:39:16Z" finished-at="2019-01-21T12:39:19Z">
+        </test-method> <!-- TargetCreation -->
+        <test-method status="PASS" signature="ConvertTarget()[pri:1, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="ConvertTarget" duration-ms="15460" started-at="2019-01-22T07:06:12Z" description="Converting a Target to Lead" finished-at="2019-01-22T07:06:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConvertTarget -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_AddTarget_Convert@35cabb2a]" name="TearDown" is-config="true" duration-ms="3291" started-at="2019-01-22T07:06:28Z" finished-at="2019-01-22T07:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.ConvergeHub.TestCases.TC_AddContacts -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AddTarget_Convert -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

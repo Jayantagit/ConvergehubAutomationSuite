@@ -4,15 +4,16 @@
   <listeners>
     <listener class-name="com.ConvergeHub.Listeners.CustomListeners"/>
   </listeners>
-  <test thread-count="5" name="Lead Test Cases(failed)">
+  <test thread-count="5" name="Target Test Cases(failed)">
     <classes>
-      <class name="com.ConvergeHub.TestCases.TC_AddLead">
+      <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert">
         <methods>
           <include name="TearDown"/>
-          <include name="LeadCreation"/>
+          <include name="ConvertTarget"/>
+          <include name="DealCreation"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ConvergeHub.TestCases.TC_AddLead -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_AddTarget_Convert -->
     </classes>
-  </test> <!-- Lead Test Cases(failed) -->
+  </test> <!-- Target Test Cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->
