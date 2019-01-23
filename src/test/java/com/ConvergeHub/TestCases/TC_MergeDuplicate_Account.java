@@ -9,17 +9,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.ConvergeHub.Base.Base;
+import com.ConvergeHub.Pages.AccountPage;
 import com.ConvergeHub.Pages.LeadPage;
 import com.ConvergeHub.Pages.LoginPage;
 
 
-public class TC_MergeDuplicate extends Base  
+public class TC_MergeDuplicate_Account extends Base  
 {    
-	@Test(groups={"Regression"},description="Merge Duplicates-Leads")
+	@Test(groups={"Regression"},description="Merge Duplicates-Accounts")
 	
-	public static void MergeLeads() throws InterruptedException
+	public static void MergeAccounts() throws InterruptedException
 	{
 		LeadPage lead=new LeadPage();
+		AccountPage account=new AccountPage();
 		/*
 		//Login section for Testing-Start
 		LoginPage login=new LoginPage();		
@@ -33,20 +35,20 @@ public class TC_MergeDuplicate extends Base
 	    //Login Section-End
 	     */
 	  //Navigate to the Lead Page
-	    driver.get("https://staging.convergehub.com/leads");
+	    driver.get("https://staging.convergehub.com/accounts/");
 	    
 	    try
 	    {
-	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
+	        List<WebElement> acct_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
 	          
-	        if(Leads_num.size()>1)
+	        if(acct_num.size()>1)
 	        {
-	        	Leads_num.get(0).click();//Click the First Lead in the List
-	        	Leads_num.get(1).click();//Click the Second Lead in the List
+	        	acct_num.get(0).click();//Click the First Account in the List
+	        	acct_num.get(1).click();//Click the Second Account in the List
 	        }
 	        else
 	        {
-	        	System.out.println("No or only One Lead is present in the Lead List");      
+	        	System.out.println("No or only One Account is present in the Account List");      
 	        }
 	    	
 	    }
@@ -67,8 +69,8 @@ public class TC_MergeDuplicate extends Base
 	    WebDriverWait successMsg = new WebDriverWait (driver, 20);
 	    successMsg.until(ExpectedConditions.visibilityOf(lead.HeaderNotificationMsg));
 	   
-	    //Verification Step-Selected leads are successfully merged
-	  	Assert.assertTrue(lead.HeaderNotificationMsg.getText().toString().contains("Selected leads are successfully merged."));
+	    //Verification Step-Selected Accounts are successfully merged
+	  	Assert.assertTrue(lead.HeaderNotificationMsg.getText().toString().contains("Selected accounts are successfully merged."));
 	    
 	}
 

@@ -6,6 +6,7 @@ com\ConvergeHub\TestCases\TC_MergeDuplicate.class
 com\ConvergeHub\Pages\DealPage.class
 com\ConvergeHub\TestCases\TC_ReferLead.class
 com\ConvergeHub\Pages\LoginPage.class
+com\ConvergeHub\TestCases\TC_MergeDuplicate_Account.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToContact.class
 com\ConvergeHub\TestCases\TC_AddContacts.class
 com\ConvergeHub\TestCases\TC_BasicSearch.class
