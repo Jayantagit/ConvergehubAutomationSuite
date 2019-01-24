@@ -35,7 +35,9 @@ public class TC_AddCommentandNoteToLead extends Base
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 /*
 	    
 	    try
 	    {
@@ -57,6 +59,14 @@ public class TC_AddCommentandNoteToLead extends Base
 	    }
 	    
 	   lead.CommentIcon.click();
+	   */
+	   
+	   	driver.findElement(By.id("mydiv"+SavedData.getProperty("Lead_Id"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    driver.findElement(By.linkText("Add Comment")).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    
 	   lead.CommentTextBox.sendKeys("Test Comments\n Entered");
 	   lead.CommentSaveButton.click();
 	    
@@ -82,19 +92,23 @@ public class TC_AddCommentandNoteToLead extends Base
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 
+		int rowcnt=0;
 	    
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
-	          
-	        if(Leads_num.size()>0)
+	        for(int cnt=0;cnt<Leads_num.size();cnt++)
 	        {
-	        	Leads_num.get(0).click();//Click the First Lead in the List
-	        }
-	        else
-	        {
-	        	System.out.println("No Lead is present in the Lead List");      
+	           String val=Leads_num.get(cnt).getAttribute("value");
+	           if(val.contains(SavedData.getProperty("Lead_Id")))
+	           {
+	        	   rowcnt=cnt+1;
+	        	   break;
+	           }
+	     
 	        }
 	    	
 	    }
@@ -103,7 +117,14 @@ public class TC_AddCommentandNoteToLead extends Base
 	    	e.printStackTrace();
 	    }
 	    
-	    lead.NotesIcon.click();
+	    //lead.NotesIcon.click();
+	    driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Lead_Id"))).click();
+	    String noteicon="(//span[contains(text(),' Notes')])["+rowcnt+"]";
+	    System.out.println(noteicon);
+	    driver.findElement(By.xpath(noteicon)).click();
+	  
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		
 	    lead.NotesSubject.sendKeys("Test Notes");
 	    lead.NotesDescription.sendKeys("Sample Description /n Entered");
 	    lead.NotesSaveBtn.click();
