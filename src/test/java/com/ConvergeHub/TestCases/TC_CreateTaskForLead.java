@@ -33,10 +33,13 @@ public class TC_CreateTaskForLead extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+	    */
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
+	   /* 
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -55,8 +58,11 @@ public class TC_CreateTaskForLead extends Base
 	    {
 	    	e.printStackTrace();
 	    }
-	    
+	        
 	    lead.LeadListSelection.click();
+	    */
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Lead_Id"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.findElement(By.linkText("Create Task")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    

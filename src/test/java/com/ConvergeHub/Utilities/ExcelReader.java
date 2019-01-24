@@ -1,7 +1,9 @@
 package com.ConvergeHub.Utilities;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -28,6 +30,7 @@ public class ExcelReader
 	private HSSFRow row=null;
 	private HSSFCell cell=null;
 	
+	
 	public ExcelReader(String path)
 	{
 		this.path=path;
@@ -37,6 +40,8 @@ public class ExcelReader
 			workbook=new HSSFWorkbook(fis);
 			sheet=workbook.getSheetAt(0);
 			fis.close();
+			
+			
 		}
 		catch(Exception e)
 		{
@@ -68,6 +73,26 @@ public class ExcelReader
 		return cell.getStringCellValue();
 		
 	}
+	
 
+	public void SetCellData(String sheetname,int rownum,int colnum,String val)
+	{
+		try
+		{
+		sheet=workbook.getSheet(sheetname);
+		cell=sheet.getRow(rownum).getCell(colnum);
+		fileout=new FileOutputStream(path);	
+		cell.setCellValue(val);
+		workbook.write(fileout);		
+		fileout.close();
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 
 }

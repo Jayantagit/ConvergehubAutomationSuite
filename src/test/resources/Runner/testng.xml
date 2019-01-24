@@ -8,20 +8,21 @@
   <test  name="Lead Test Cases">
   <classes>
   <!--Lead Test Cases      -->
-   <!--
-      <class name="com.ConvergeHub.TestCases.TC_AddLead"/>
+  
+      <class name="com.ConvergeHub.TestCases.TC_AddLead"/>       
+      <class name="com.ConvergeHub.TestCases.TC_EditLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
+      <!--
       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToLead"/>
       <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent"/>
-      <class name="com.ConvergeHub.TestCases.TC_AddLead_QuickView"/>
       <class name="com.ConvergeHub.TestCases.TC_ReferLead"/>
-      <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/> 
-      <class name="com.ConvergeHub.TestCases.TC_EditLead"/> 
-      <class name="com.ConvergeHub.TestCases.TC_BasicSearch"/> 
-      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_ConvertLead"/> 
+      <class name="com.ConvergeHub.TestCases.TC_MassUpdateForLead"/> 
+      <class name="com.ConvergeHub.TestCases.TC_AddLead_QuickView"/>
+      <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/> 
+      <class name="com.ConvergeHub.TestCases.TC_BasicSearch"/> 
       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate"/> 
-       -->
+      --> 	
    </classes>
    </test> 
      
@@ -63,10 +64,12 @@
  <test  name="Account Test Cases">
  <classes> 
   <!--Account Test Cases        -->
+  <!--
        <class name="com.ConvergeHub.TestCases.TC_AddAccount"/>  
        <class name="com.ConvergeHub.TestCases.TC_CreateTask_Comments_Notes_ScheduleEvent_ForAccount"/>
        <class name="com.ConvergeHub.TestCases.TC_DeleteAccount"/> 
-       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate_Account"/>    
+       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate_Account"/>  
+  -->       
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

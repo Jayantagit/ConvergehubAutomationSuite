@@ -37,8 +37,9 @@ public class TC_ConvertLead extends Base
 	   */
 	    
 	    //Navigate to the Lead Page
-	    driver.get("https://staging.convergehub.com/leads");
+		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
 	    
+		/*
 	    //Click the Advance Search Button
 	    lead.AdvSearchBtn.click();
 	    
@@ -53,6 +54,8 @@ public class TC_ConvertLead extends Base
 		 lead.AdvSearchButton.click();
 		 WebDriverWait waitSearch = new WebDriverWait (driver, 20);
 		 waitSearch.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Current Search:')]")));
+	     */
+	    
 	    
 	    try
 	    {

@@ -2,6 +2,7 @@ package com.ConvergeHub.TestCases;
 
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -64,7 +65,9 @@ public class TC_MergeDuplicate_Account extends Base
 	    mergebtn.until(ExpectedConditions.visibilityOf(lead.MergeSaveRecord));
 	    
         //Click the save button
-	    lead.MergeSaveRecord.click();
+	    JavascriptExecutor executor = (JavascriptExecutor)driver;
+	    executor.executeScript("arguments[0].click();", lead.MergeSaveRecord);
+	    //lead.MergeSaveRecord.click();
 	    
 	    WebDriverWait successMsg = new WebDriverWait (driver, 20);
 	    successMsg.until(ExpectedConditions.visibilityOf(lead.HeaderNotificationMsg));

@@ -17,6 +17,7 @@ public class LeadPage extends Base
 	@FindBy(id="lead_source_select_drp_dwn") public WebElement LeadSource;
 	@FindBy(id="status_select_drp_dwn") public WebElement LeadStatus;
 	@FindBy(id="industry_select_drp_dwn") public WebElement Industry;
+	@FindBy(id="phoneNew1") public WebElement PhoneNo;
 	@FindBy(id="emailAddress1") public WebElement EmailAddress;
 	@FindBy(xpath="//button[@type='submit']") public WebElement LeadSave;
 	@FindBy(xpath="(//span[contains(text(),'Select')])[1]") public WebElement LeadListSelection;//Selecting the First Lead in the List

@@ -2,6 +2,7 @@ package com.ConvergeHub.Base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -30,16 +31,18 @@ public class Base
 		
 	 public static  Properties config=new Properties();
 	 public static  Properties OR=new Properties();
+	 public static  Properties SavedData=new Properties();
 	 public static  FileInputStream fis;
+	 public static  FileOutputStream fos;
 	 public static WebDriverWait wait;
 	 public static WebElement dropdown;
 	 public static String browser;
-	  
+	// public static String TestDataPath=System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\TestData.xls"; 
 	 public static Logger log=Logger.getLogger("rootLogger");
 	 public static ExcelReader excel=new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\excel\\TestData.xls");
-	 
 	 public static ExtentReports rep=ExtentManager.getInstance();
 	 public static ExtentTest test;
+	 
 	 
 	 @BeforeSuite
 		public void setUp()
@@ -49,6 +52,7 @@ public class Base
 				    try 
 				    {
 						fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\Config.properties");
+						
 					} 
 				    catch (FileNotFoundException e) 
 				    {
@@ -71,6 +75,7 @@ public class Base
 		    	   try 
 		    	   {
 					fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\OR.properties");
+					//fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\OR.properties");
 				   } 
 		    	   catch (FileNotFoundException e) 
 		    	   {
@@ -87,7 +92,18 @@ public class Base
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				  }
-		    	  		    	   
+		    	   
+		    	   try 
+		    	   {
+					fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\SavedVal.properties");
+					
+				   } 
+		    	   catch (FileNotFoundException e) 
+		    	   {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				   }
+			    	  		    	   
 		    	   if(System.getenv("Browser")!=null && !System.getenv("Browser").isEmpty())
 		    	   {
 		    		   browser=System.getenv("Browser");

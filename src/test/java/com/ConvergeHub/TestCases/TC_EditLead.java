@@ -6,10 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.ConvergeHub.Base.Base;
 import com.ConvergeHub.Pages.LeadPage;
 import com.ConvergeHub.Pages.LoginPage;
@@ -34,8 +34,9 @@ public class TC_EditLead extends Base
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
 	    */
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads/add/"+SavedData.getProperty("Lead_Id"));
 	    
+	    /*
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -58,8 +59,10 @@ public class TC_EditLead extends Base
 	    
 	    lead.EditIcon.click();
 	    
+	   
 	    int random = (int )(Math.random() * 50 + 1); 
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
 	    
 	    lead.FirstName.clear(); //Clear the existing value in First Name
 	    lead.FirstName.sendKeys("Test"+String.valueOf(random)); //Update First Name
@@ -69,6 +72,26 @@ public class TC_EditLead extends Base
 	    
 	    lead.EmailAddress.clear();//Clear the existing value in Last Name
 	    lead.EmailAddress.sendKeys("Test"+String.valueOf(random)+"@test.com"); //Update Email Address
+	    	    
+	    */
+	    
+	    //Select the new  Lead Status
+	    lead.LeadStatus.click();
+	    String LeadStatusNew=excel.GetCellData("Lead", 1, 10);
+	    new Select(lead.LeadStatus).selectByVisibleText(LeadStatusNew);
+	    
+	    //Enter the new Email address
+	    lead.EmailAddress.clear();
+	    String LeadEmailNew=excel.GetCellData("Lead", 1, 11);
+	    lead.EmailAddress.sendKeys(LeadEmailNew);
+	    
+	    //Select the new  Industry
+	    String LeadIndustryNew=excel.GetCellData("Lead", 1, 12);
+	    new Select(lead.Industry).selectByVisibleText(LeadIndustryNew);
+	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+	    
+	    
+	    //Click the Save button after Editing
 	    lead.LeadSave.click();
 	    
 	    WebDriverWait wait = new WebDriverWait (driver, 20);

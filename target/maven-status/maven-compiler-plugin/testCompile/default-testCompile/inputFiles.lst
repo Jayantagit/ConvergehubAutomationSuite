@@ -7,6 +7,7 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\AccountPa
 D:\AutomationTestScripts\Workspace\src\test\java\Rough\rough.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_EditLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Listeners\CustomListeners.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\MonitoringMail.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddLead_QuickView.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_DeleteAccount.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ConvertLead.java
@@ -30,8 +31,10 @@ D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\Excel
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Pages\TargetPage.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForLead.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTaskForContact.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\SendEmail.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_CreateTask_Comments_Notes_ScheduleEvent_ForAccount.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ScheduleEvent_Contact.java
+D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\Utilities\TestConfig.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_AddAccount.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_MergeDuplicate_Account.java
 D:\AutomationTestScripts\Workspace\src\test\java\com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.java
