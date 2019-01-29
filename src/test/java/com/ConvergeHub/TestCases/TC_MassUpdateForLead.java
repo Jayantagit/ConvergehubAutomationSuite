@@ -30,7 +30,7 @@ public class TC_MassUpdateForLead extends Base
 	{
 		LeadPage lead=new LeadPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -39,8 +39,9 @@ public class TC_MassUpdateForLead extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
+	     -------------------------------------------*/
 	  
+		/*-
 	    driver.get("https://staging.convergehub.com/leads");
 	    
 	    try
@@ -63,6 +64,13 @@ public class TC_MassUpdateForLead extends Base
 	    	e.printStackTrace();
 	    }
 	    
+	    -------------------------------------------*/
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Lead_Id"))).click();
+		driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Lead_Id_New"))).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    lead.Actiondropdown.click(); //Click the Action dropdown
 	    driver.findElement(By.linkText("Mass Update")).click();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

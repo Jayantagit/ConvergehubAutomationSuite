@@ -23,7 +23,7 @@ public class TC_EditLead extends Base
 	{
 		LeadPage lead=new LeadPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -32,9 +32,11 @@ public class TC_EditLead extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-	  
+	     -------------------------------------------*/
+		
+		System.out.println("https://"+config.getProperty("Environment")+".convergehub.com/leads/add/"+SavedData.getProperty("Lead_Id"));
 	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads/add/"+SavedData.getProperty("Lead_Id"));
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    /*
 	    try

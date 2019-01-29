@@ -35,7 +35,11 @@ public class TC_ScheduleEvent extends Base
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+	   // driver.get("https://staging.convergehub.com/leads");
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    /*
 	    
 	    try
 	    {
@@ -57,12 +61,23 @@ public class TC_ScheduleEvent extends Base
 	    }
 	    
 	    lead.LeadListSelection.click();
+	    
+	    */
+	    
+	    //Click the Select Dropdown of the selected Lead
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Lead_Id"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    //Select the Schedule Event option from the Select Dropdown
 	    driver.findElement(By.linkText("Schedule Event")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
+	    /*
 	    new Actions(driver).moveToElement(lead.EventSubject).build().perform();//Set Focus on Event Subject
+	    lead.EventSubject.sendKeys("Follow up Meeting");
+	    */
 	    
-	    lead.EventSubject.sendKeys("Test Subject");
+	    driver.findElement(By.id("meeting_"+SavedData.getProperty("Lead_Id"))).sendKeys("Follow up Meeting");
 	    lead.EventDescription.sendKeys("Sample Description");
 	    lead.NotesSaveBtn.click();	    
 	    Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Event Relation Added");//Validation Step-Event Schedule added successfully

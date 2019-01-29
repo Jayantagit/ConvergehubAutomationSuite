@@ -22,10 +22,9 @@ public class TC_ConvertLead extends Base
 	
 	public static void Convertlead() throws InterruptedException
 	{
-		LeadPage lead=new LeadPage();
+		LeadPage lead=new LeadPage();//Initializing the Lead Class
 		
-		/*
-		//Login section for Testing
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -34,12 +33,13 @@ public class TC_ConvertLead extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	   */
+	   -------------------------------------------*/
 	    
 	    //Navigate to the Lead Page
-		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
-		/*
+		/*--------------Commenting the Code where searching for Lead with In Process Status & Convert it
 	    //Click the Advance Search Button
 	    lead.AdvSearchBtn.click();
 	    
@@ -54,7 +54,7 @@ public class TC_ConvertLead extends Base
 		 lead.AdvSearchButton.click();
 		 WebDriverWait waitSearch = new WebDriverWait (driver, 20);
 		 waitSearch.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Current Search:')]")));
-	     */
+	     
 	    
 	    
 	    try
@@ -79,8 +79,18 @@ public class TC_ConvertLead extends Base
 	    }
 	    
 	    lead.LeadListSelection.click();//Click the First In Process Lead in the List
-	    driver.findElement(By.linkText("Convert")).click();//Select the Convert option from the dropdown
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    */
+		 
+		//Click the Select Dropdown of the selected Lead
+		driver.findElement(By.id("mydiv"+SavedData.getProperty("Lead_Id"))).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+			
+		//Select the Refer option from the Select Dropdown
+		driver.findElement(By.linkText("Convert")).click();//Select the Convert option from the dropdown
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	   
 	    
 	    //Wait for the appearance of the Convert Lead Pop-up
 	    WebDriverWait wait= new WebDriverWait (driver, 20);
@@ -90,7 +100,9 @@ public class TC_ConvertLead extends Base
 	    
 	    //Set the Account Name in the Convert Lead pop up
 	    lead.ConvertLeadAcctName.clear();
-	    lead.ConvertLeadAcctName.sendKeys("Test_"+String.valueOf(nm));	
+	    //lead.ConvertLeadAcctName.sendKeys("Test_"+String.valueOf(nm));
+	    String AcctName=excel.GetCellData("Lead", 1, 14);//Fetching the Acct Name from the Test data
+	    lead.ConvertLeadAcctName.sendKeys(AcctName);
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    //Check the Create Contact CheckBox
@@ -103,11 +115,20 @@ public class TC_ConvertLead extends Base
 	    	    
 	    //-----Filled up the Contact section------
 	    lead.ConvertLeadContactFirstNm.clear();
-	    lead.ConvertLeadContactFirstNm.sendKeys("Test_"+String.valueOf(nm));
+	    //lead.ConvertLeadContactFirstNm.sendKeys("Test_"+String.valueOf(nm));
+	    String ContactFirstNm=excel.GetCellData("Lead", 1, 15);
+	    lead.ConvertLeadContactFirstNm.sendKeys(ContactFirstNm);
+	    
 	    lead.ConvertLeadContactLastNm.clear();
-	    lead.ConvertLeadContactLastNm.sendKeys("Test_"+String.valueOf(nm));
+	   // lead.ConvertLeadContactLastNm.sendKeys("Test_"+String.valueOf(nm));
+	    String ContactLastNm=excel.GetCellData("Lead", 1, 16);
+	    lead.ConvertLeadContactLastNm.sendKeys(ContactLastNm);
+	    
+	    
 	    lead.ConvertLeadContactEmail.clear();
-	    lead.ConvertLeadContactEmail.sendKeys("Test"+String.valueOf(nm)+"@test.com");
+	   // lead.ConvertLeadContactEmail.sendKeys("Test"+String.valueOf(nm)+"@test.com");
+	    String ContactEmail=excel.GetCellData("Lead", 1, 17);
+	    lead.ConvertLeadContactEmail.sendKeys(ContactEmail);
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	    
@@ -120,10 +141,23 @@ public class TC_ConvertLead extends Base
 	    }
 	    //-----Filled up the Deal section------
 	    lead.ConvertLeadDealName.clear();
-	    lead.ConvertLeadDealName.sendKeys("Deal For Lead_"+String.valueOf(nm)+"@test.com");
-	    lead.ConvertLeadDealEstimatedAmt.sendKeys("500");
-	    lead.ConvertLeadComment.sendKeys("Test Comments");
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    //lead.ConvertLeadDealName.sendKeys("Deal For Lead_"+String.valueOf(nm)+"@test.com");
+	   // lead.ConvertLeadDealEstimatedAmt.sendKeys("500");
+	    //lead.ConvertLeadComment.sendKeys("Test Comments");
+	    String DealName=excel.GetCellData("Lead", 1, 18);
+	    String DealEstimatedAmt=excel.GetCellData("Lead", 1, 19);
+	    String DealComment=excel.GetCellData("Lead", 1, 20);
+	    lead.ConvertLeadDealName.clear();
+	    lead.ConvertLeadDealName.sendKeys(DealName);
+	    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	    
+	    lead.ConvertLeadDealEstimatedAmt.clear();
+	    lead.ConvertLeadDealEstimatedAmt.sendKeys(DealEstimatedAmt);
+	    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	    
+	    lead.ConvertLeadComment.clear();
+	    lead.ConvertLeadComment.sendKeys(DealComment);
+	    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	    
 	    //Click the Save button
 	    lead.ConvertLeadConvertBtn.click();

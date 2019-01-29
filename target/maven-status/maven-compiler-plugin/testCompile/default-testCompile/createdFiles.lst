@@ -4,7 +4,6 @@ com\ConvergeHub\TestCases\TC_EditLead.class
 com\ConvergeHub\TestCases\TC_MassUpdateForDeal.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate.class
 com\ConvergeHub\Pages\DealPage.class
-com\ConvergeHub\TestCases\TC_ReferLead.class
 com\ConvergeHub\Pages\LoginPage.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate_Account.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToContact.class
@@ -24,6 +23,7 @@ com\ConvergeHub\Base\Base.class
 com\ConvergeHub\TestCases\TC_AddLead_QuickView.class
 com\ConvergeHub\Pages\ContactPage.class
 Rough\RoughOther.class
+com\ConvergeHub\TestCases\TC_ReferLead_AddToList.class
 com\ConvergeHub\Utilities\TestConfig.class
 com\ConvergeHub\TestCases\TC_Search_Deal.class
 com\ConvergeHub\Pages\LeadPage.class

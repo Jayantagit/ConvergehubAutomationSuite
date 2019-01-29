@@ -3,6 +3,7 @@ package com.ConvergeHub.TestCases;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import com.ConvergeHub.Base.Base;
@@ -19,14 +21,18 @@ import com.ConvergeHub.Pages.LoginPage;
 
 
 public class TC_AddLead extends Base  
-{    
-	@Test(groups={"Regression"},description="Create New Lead")
+{   
 	
-	public static void LeadCreation() throws InterruptedException
+	static AtomicInteger sequence = new AtomicInteger(0);
+	
+	@Test(groups={"Regression"},invocationCount=2,description="Create New Lead")
+	
+	public static void LeadCreation(ITestContext testContext) throws InterruptedException
 	{
 		LoginPage login=new LoginPage();
 		LeadPage lead=new LeadPage();
 		
+		/*-------------------------Login Code
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
 		login.password.sendKeys(config.getProperty("Password"));
@@ -34,8 +40,10 @@ public class TC_AddLead extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,30); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='icon search-top']")));
+	    -------------------------------------------*/
 	  
 	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads/add");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    //Select the Salutation
 	    lead.Salutation.click();
@@ -85,11 +93,12 @@ public class TC_AddLead extends Base
 	   //Click  Save Button
 	   lead.LeadSave.click();
 	    
-	   //Assertion statement to be added for the verification
+	   //Assertion statement Added for the verification
 	   
 	    WebDriverWait wait = new WebDriverWait (driver, 20);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
 	    
+	    int currentCount= sequence.addAndGet(1);
 	    
 	    
 	    String  baseurl=driver.getCurrentUrl();
@@ -100,13 +109,32 @@ public class TC_AddLead extends Base
 		
 		//excel.SetCellData("ID", 1, 0, Lead_ID);
 		
-		SavedData.put("Lead_Id", Lead_ID);
-		try {
-			SavedData.store(fos, "saving");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		System.out.println(currentCount);
+		if(currentCount>1)
+		{
+			//SavedData.clear();
+			//SavedData.put("Lead_Id_New", Lead_ID);
+			SavedData.setProperty("Lead_Id_New", Lead_ID);
+			
+			
+		}
+		else
+		{
+			//SavedData.put("Lead_Id", Lead_ID);
+			SavedData.setProperty("Lead_Id", Lead_ID);
+		}
+		
+		
+		try 
+		{			
+			SavedData.store(fos,"Saved");
+		} 
+		catch (IOException e) 
+		{
+			
 			e.printStackTrace();
 		}
+		
 	
 	    Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Lead Created");//Validation that Lead edited successfully
 	    

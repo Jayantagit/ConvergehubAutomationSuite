@@ -1,6 +1,8 @@
 package com.ConvergeHub.TestCases;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,8 +22,8 @@ public class TC_MergeDuplicate extends Base
 	public static void MergeLeads() throws InterruptedException
 	{
 		LeadPage lead=new LeadPage();
-		/*
-		//Login section for Testing-Start
+		
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -30,11 +32,13 @@ public class TC_MergeDuplicate extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    //Login Section-End
-	     */
+	     -------------------------------------------*/
 	  //Navigate to the Lead Page
-	    driver.get("https://staging.convergehub.com/leads");
-	    
+	   //driver.get("https://staging.convergehub.com/leads");
+	   driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   
+	   /* 
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -55,7 +59,13 @@ public class TC_MergeDuplicate extends Base
 	    	e.printStackTrace();
 	    }
 	    
-	    //Click the Action DropDown
+	    */
+	   //Select the Leads already created from the List
+	    driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Lead_Id"))).click();
+		driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Lead_Id_New"))).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+		//Click the Action DropDown
 	    lead.Actiondropdown.click(); 
 	    driver.findElement(By.linkText("Merge Duplicates")).click();
 	    WebDriverWait mergebtn = new WebDriverWait (driver, 20);

@@ -49,6 +49,7 @@ public class LeadPage extends Base
 	@FindBy(id="emailAddress1_popup") public WebElement Emailpopup;
 	@FindBy(id="comment") public WebElement Commentpopup;
 	@FindBy(xpath="(//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'])[2]") public WebElement SaveandNew;
+	@FindBy(xpath="(//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'])[1]") public WebElement QuickViewSave;
 	
 	//Refer a Lead
 	@FindBy(id="selectFromLibrary") public WebElement ReferBtn;
@@ -101,6 +102,10 @@ public class LeadPage extends Base
 	
 	//Merge Duplicate
 	@FindBy(id="merge_save_records") public WebElement MergeSaveRecord;
+	
+	//Add ToList
+	@FindBy(id="list_name") public WebElement ListName;
+	@FindBy(xpath="//button/span[contains(text(),'Add to List')]") public WebElement AddToListBtn;
 	
 	public LeadPage() 
 	{

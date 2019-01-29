@@ -27,7 +27,7 @@ public class TC_BasicSearch extends Base
 	{
 		LeadPage lead=new LeadPage();
 		
-	  /*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -36,21 +36,23 @@ public class TC_BasicSearch extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	 */
+	    -------------------------------------------*/
 		
 	   	//Navigate to the Lead Page  
-	    driver.get("https://staging.convergehub.com/leads");
+	    //driver.get("https://staging.convergehub.com/leads");
+		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	  //Clear the Search field and Enter the Search Text for Quick Search
         lead.BasicSearchTxt.clear();
-        lead.BasicSearchTxt.sendKeys("Test");
+        lead.BasicSearchTxt.sendKeys(excel.GetCellData("Lead", 1, 29));
 	    
 	    //Click the Go button
 	    lead.Gobtn.click();
 	    WebDriverWait wait = new WebDriverWait (driver, 20);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Current Search:')]")));
 	     
-	    
+	    //*****************************Validate the Search Result***********************************************************
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath("//input[@class='list_checkbox']"));
@@ -71,10 +73,7 @@ public class TC_BasicSearch extends Base
 	    	e.printStackTrace();
 	    	
 	    }
-	    
-
-	    //Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Event Relation Added");//Validation Step-Event Schedule added successfully
-	    
+	    	       
 	}
       
 }

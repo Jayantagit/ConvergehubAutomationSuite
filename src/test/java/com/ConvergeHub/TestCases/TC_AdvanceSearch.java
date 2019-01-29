@@ -27,7 +27,7 @@ public class TC_AdvanceSearch extends Base
 	{
 		LeadPage lead=new LeadPage();
 		
-	   /*   
+		/*-------------------------Login Code 
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -36,21 +36,23 @@ public class TC_AdvanceSearch extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
+	     -------------------------------------------*/
 	   
 	  
-	    driver.get("https://staging.convergehub.com/leads");
+	    //driver.get("https://staging.convergehub.com/leads");
+		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/leads");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    lead.AdvSearchBtn.click();
 	    //Enter/Select the search Filters
-	    lead.AdvSearchFirstNm.sendKeys("Test");
-	    lead.AdvSearchLastNm.sendKeys("Test");
-	    lead.AdvSearchAcctNm.sendKeys("Test");
+	    lead.AdvSearchFirstNm.sendKeys(excel.GetCellData("Lead", 1, 30));
+	    lead.AdvSearchLastNm.sendKeys(excel.GetCellData("Lead", 1, 31));
+	    lead.AdvSearchAcctNm.sendKeys(excel.GetCellData("Lead", 1, 32));
 	    
 	    //Select the Search Filter for Lead source
 	    lead.AdvSearchLeadSrc.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    WebElement SrchLeadSource=driver.findElement(By.id("chk_lead_source_leads_"+config.getProperty("LeadSource")));
+	    WebElement SrchLeadSource=driver.findElement(By.id("chk_lead_source_leads_"+excel.GetCellData("Lead", 1, 33)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SrchLeadSource);
 	     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    
@@ -59,7 +61,7 @@ public class TC_AdvanceSearch extends Base
 	  //Select the Search Filter for Status
 	    lead.AdvSearchStatus.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    WebElement SrchStatus=driver.findElement(By.id("chk_status_leads_"+config.getProperty("SrchStatus")));
+	    WebElement SrchStatus=driver.findElement(By.id("chk_status_leads_"+excel.GetCellData("Lead", 1, 34)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SrchStatus);
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	    
@@ -67,14 +69,14 @@ public class TC_AdvanceSearch extends Base
 	    
 	    lead.AdvSearchIndustry.click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    WebElement IndustrySel=driver.findElement(By.id("chk_industry_leads_"+config.getProperty("SrchIndustry")));
+	    WebElement IndustrySel=driver.findElement(By.id("chk_industry_leads_"+excel.GetCellData("Lead", 1, 35)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",IndustrySel);	     
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	    
 	    //Select the Search Filter for LeadType
 	    lead.AdvSearchLeadType.click();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    WebElement LeadType= driver.findElement(By.id("chk_type_leads_"+config.getProperty("SrchLeadType")));
+	    WebElement LeadType= driver.findElement(By.id("chk_type_leads_"+excel.GetCellData("Lead", 1, 36)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",LeadType);
 	   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	  
@@ -96,7 +98,7 @@ public class TC_AdvanceSearch extends Base
 	        }
 	        else
 	        {
-	        	System.out.println("No records found for the selected search criteras");  
+	        	System.out.println("No records found for the selected advance search criteras");  
 	        }
 	       	    	
 	    }

@@ -13,11 +13,14 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.ConvergeHub.Pages.LeadPage;
+import com.ConvergeHub.Pages.LoginPage;
 import com.ConvergeHub.Utilities.ExcelReader;
 import com.ConvergeHub.Utilities.ExtentManager;
 import com.aventstack.extentreports.ExtentReports;
@@ -95,7 +98,8 @@ public class Base
 		    	   
 		    	   try 
 		    	   {
-					fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\SavedVal.properties");
+					fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\SavedVal.properties",false);
+					SavedData.clear(); 
 					
 				   } 
 		    	   catch (FileNotFoundException e) 
@@ -126,7 +130,18 @@ public class Base
 		    	   driver.get(config.getProperty("TestsuiteURL"));
 		    	   driver.manage().window().maximize();
 		    	   driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("ImplicitTime")), TimeUnit.SECONDS);
-		    	   wait=new WebDriverWait(driver,5);      	      	   
+		    	   wait=new WebDriverWait(driver,5);  
+		    	
+		    	//***************LOGIN CODE-START
+		    	LoginPage login=new LoginPage();   
+		    	login.username.clear();
+		   	    login.username.sendKeys(config.getProperty("UserName"));
+		   		login.password.sendKeys(config.getProperty("Password"));
+		   	    login.login.click();
+		   	    System.out.println("Successfully Logged");
+		   	    wait=new WebDriverWait(driver,30); 
+		   	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='icon search-top']")));
+		   	    //********************LOGIN CODE-END
 		    	   
 			}
 		}
@@ -190,8 +205,7 @@ public class Base
 			
 			test.log(Status.INFO, "Selected from :"+locator +"value as :"+value);
 		}
-		
-		
+	
 		@AfterSuite
 		public void TearDown()
 		{
@@ -199,7 +213,19 @@ public class Base
 			if(driver !=null)
 			{  
 				System.out.println("Test Execution Completed");
-				driver.get("https://staging.convergehub.com/users/logout");
+				driver.get("https://"+config.getProperty("Environment")+".convergehub.com/users/logout");
+				/*
+				try 
+				{
+					fis.close();
+					fos.close();
+				} 
+				catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				*/
+				
 				driver.quit();
 			    log.debug("Driver Closed");
 			}
