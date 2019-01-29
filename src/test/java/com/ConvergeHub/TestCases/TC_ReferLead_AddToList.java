@@ -140,7 +140,8 @@ public class TC_ReferLead_AddToList extends Base
 	    wait.until(ExpectedConditions.visibilityOf(lead.ListName));
 	    
 	    //Enter the List Name
-	    String ListName=excel.GetCellData("Lead", 1, 13);//Fetching the List Name from the Test data
+	   // String ListName=excel.GetCellData("Lead", 1, 13);//Fetching the List Name from the Test data
+	    String ListName=excel.getCellDataUpd("Lead", "ListName", 1);
 	    lead.ListName.sendKeys(ListName);
 	    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	    

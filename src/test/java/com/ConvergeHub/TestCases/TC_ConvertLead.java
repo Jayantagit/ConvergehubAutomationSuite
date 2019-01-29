@@ -101,7 +101,8 @@ public class TC_ConvertLead extends Base
 	    //Set the Account Name in the Convert Lead pop up
 	    lead.ConvertLeadAcctName.clear();
 	    //lead.ConvertLeadAcctName.sendKeys("Test_"+String.valueOf(nm));
-	    String AcctName=excel.GetCellData("Lead", 1, 14);//Fetching the Acct Name from the Test data
+	   // String AcctName=excel.GetCellData("Lead", 1, 14);//Fetching the Acct Name from the Test data
+	    String AcctName=excel.getCellDataUpd("Lead", "AcctName", 1);
 	    lead.ConvertLeadAcctName.sendKeys(AcctName);
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
@@ -116,18 +117,21 @@ public class TC_ConvertLead extends Base
 	    //-----Filled up the Contact section------
 	    lead.ConvertLeadContactFirstNm.clear();
 	    //lead.ConvertLeadContactFirstNm.sendKeys("Test_"+String.valueOf(nm));
-	    String ContactFirstNm=excel.GetCellData("Lead", 1, 15);
+	    //String ContactFirstNm=excel.GetCellData("Lead", 1, 15);
+	    String ContactFirstNm=excel.getCellDataUpd("Lead", "ContactFirstNm", 1);
 	    lead.ConvertLeadContactFirstNm.sendKeys(ContactFirstNm);
 	    
 	    lead.ConvertLeadContactLastNm.clear();
 	   // lead.ConvertLeadContactLastNm.sendKeys("Test_"+String.valueOf(nm));
-	    String ContactLastNm=excel.GetCellData("Lead", 1, 16);
+	   // String ContactLastNm=excel.GetCellData("Lead", 1, 16);
+	    String ContactLastNm=excel.getCellDataUpd("Lead", "ContactLastNm", 1);
 	    lead.ConvertLeadContactLastNm.sendKeys(ContactLastNm);
 	    
 	    
 	    lead.ConvertLeadContactEmail.clear();
 	   // lead.ConvertLeadContactEmail.sendKeys("Test"+String.valueOf(nm)+"@test.com");
-	    String ContactEmail=excel.GetCellData("Lead", 1, 17);
+	   // String ContactEmail=excel.GetCellData("Lead", 1, 17);
+	    String ContactEmail=excel.getCellDataUpd("Lead", "ContactEmail", 1);
 	    lead.ConvertLeadContactEmail.sendKeys(ContactEmail);
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
@@ -144,9 +148,12 @@ public class TC_ConvertLead extends Base
 	    //lead.ConvertLeadDealName.sendKeys("Deal For Lead_"+String.valueOf(nm)+"@test.com");
 	   // lead.ConvertLeadDealEstimatedAmt.sendKeys("500");
 	    //lead.ConvertLeadComment.sendKeys("Test Comments");
-	    String DealName=excel.GetCellData("Lead", 1, 18);
-	    String DealEstimatedAmt=excel.GetCellData("Lead", 1, 19);
-	    String DealComment=excel.GetCellData("Lead", 1, 20);
+	    //String DealName=excel.GetCellData("Lead", 1, 18);
+	    //String DealEstimatedAmt=excel.GetCellData("Lead", 1, 19);
+	    //String DealComment=excel.GetCellData("Lead", 1, 20);
+	    String DealName=excel.getCellDataUpd("Lead", "DealName", 1);
+	    String DealEstimatedAmt=excel.getCellDataUpd("Lead", "DealAmt", 1);
+	    String DealComment=excel.getCellDataUpd("Lead", "DealComment", 1);
 	    lead.ConvertLeadDealName.clear();
 	    lead.ConvertLeadDealName.sendKeys(DealName);
 	    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);

@@ -7,10 +7,9 @@
 
   <test  name="Lead Test Cases">
   <classes>
-  <!--Lead Test Cases      -->
-  	  
+  <!--Lead Test Cases      --> 	
   	   	
-      <class name="com.ConvergeHub.TestCases.TC_AddLead"/>     
+      <class name="com.ConvergeHub.TestCases.TC_AddLead"/>        
       <class name="com.ConvergeHub.TestCases.TC_EditLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToLead"/>
@@ -22,6 +21,7 @@
       <class name="com.ConvergeHub.TestCases.TC_BasicSearch"/>                    
       <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/>       
       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate"/> 
+     
      	
    </classes>
    </test> 

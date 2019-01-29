@@ -94,5 +94,32 @@ public class ExcelReader
 		
 	}
 	
+	public String getCellDataUpd(String sheetName, String colName, int rowNum)
+    {
+		//Row and column starting with zero
+        try
+        {
+            int col_Num = -1;
+            sheet = workbook.getSheet(sheetName);
+            row = sheet.getRow(0);
+            for(int i = 0; i < row.getLastCellNum(); i++)
+            {
+                if(row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
+                    col_Num = i;
+            }
+ 
+            row = sheet.getRow(rowNum);
+            cell = row.getCell(col_Num);
+            
+           return cell.getStringCellValue();
+            
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return "row "+rowNum+" or column "+colName +" does not exist  in Excel";
+        }
+    }
+	
 
 }

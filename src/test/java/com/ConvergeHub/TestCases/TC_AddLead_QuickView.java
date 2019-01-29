@@ -54,28 +54,37 @@ public class TC_AddLead_QuickView extends Base
 	      
 	      //Fillup the Quick view Form
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.FirstNamepopup);
-	      lead.FirstNamepopup.sendKeys(excel.GetCellData("Lead", 1, 21));
+	     // lead.FirstNamepopup.sendKeys(excel.GetCellData("Lead", 1, 21));
+	      lead.FirstNamepopup.sendKeys(excel.getCellDataUpd("Lead", "FirstNamepopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.LastNamepopup);
-	      lead.LastNamepopup.sendKeys(excel.GetCellData("Lead", 1, 22));
+	      //lead.LastNamepopup.sendKeys(excel.GetCellData("Lead", 1, 22));
+	      lead.LastNamepopup.sendKeys(excel.getCellDataUpd("Lead", "LastNamepopup", 1));
+	      
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.AccountNamepopup);
-	      lead.AccountNamepopup.sendKeys(excel.GetCellData("Lead", 1, 23));
+	     // lead.AccountNamepopup.sendKeys(excel.GetCellData("Lead", 1, 23));
+	      lead.AccountNamepopup.sendKeys(excel.getCellDataUpd("Lead", "AccountNamepopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.LeadSourcepopup);
-	      new Select(lead.LeadSourcepopup).selectByVisibleText(excel.GetCellData("Lead", 1, 24));
+	      //new Select(lead.LeadSourcepopup).selectByVisibleText(excel.GetCellData("Lead", 1, 24));
+	      new Select(lead.LeadSourcepopup).selectByVisibleText(excel.getCellDataUpd("Lead","LeadSourcepopup",1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.Statuspopup);
-	      new Select(lead.Statuspopup).selectByVisibleText(excel.GetCellData("Lead", 1, 25));
+	     // new Select(lead.Statuspopup).selectByVisibleText(excel.GetCellData("Lead", 1, 25));
+	      new Select(lead.Statuspopup).selectByVisibleText(excel.getCellDataUpd("Lead", "Statuspopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.Phonepopup);
-	      lead.Phonepopup.sendKeys(excel.GetCellData("Lead", 1, 26));
+	      //lead.Phonepopup.sendKeys(excel.GetCellData("Lead", 1, 26));
+	      lead.Phonepopup.sendKeys(excel.getCellDataUpd("Lead", "Phonepopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.Emailpopup);
-	      lead.Emailpopup.sendKeys(excel.GetCellData("Lead", 1, 27));
+	      //lead.Emailpopup.sendKeys(excel.GetCellData("Lead", 1, 27));
+	      lead.Emailpopup.sendKeys(excel.getCellDataUpd("Lead", "Emailpopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.Commentpopup);
-	      lead.Commentpopup.sendKeys(excel.GetCellData("Lead", 1, 28));
+	      //lead.Commentpopup.sendKeys(excel.GetCellData("Lead", 1, 28));
+	      lead.Commentpopup.sendKeys(excel.getCellDataUpd("Lead", "Commentpopup", 1));
 	      
 	      ((JavascriptExecutor) driver).executeScript("arguments[0].click();",lead.QuickViewSave);//Click the Save Button
 	      //lead.SaveandNew.click();

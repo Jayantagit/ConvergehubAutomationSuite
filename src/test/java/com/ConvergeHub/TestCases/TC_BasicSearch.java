@@ -45,7 +45,8 @@ public class TC_BasicSearch extends Base
 	    
 	  //Clear the Search field and Enter the Search Text for Quick Search
         lead.BasicSearchTxt.clear();
-        lead.BasicSearchTxt.sendKeys(excel.GetCellData("Lead", 1, 29));
+       // lead.BasicSearchTxt.sendKeys(excel.GetCellData("Lead", 1, 29));
+        lead.BasicSearchTxt.sendKeys(excel.getCellDataUpd("Lead", "BasicSearchText", 1));
 	    
 	    //Click the Go button
 	    lead.Gobtn.click();

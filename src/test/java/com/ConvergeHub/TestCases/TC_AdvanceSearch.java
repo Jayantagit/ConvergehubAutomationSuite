@@ -45,14 +45,19 @@ public class TC_AdvanceSearch extends Base
 	    
 	    lead.AdvSearchBtn.click();
 	    //Enter/Select the search Filters
+	    /*
 	    lead.AdvSearchFirstNm.sendKeys(excel.GetCellData("Lead", 1, 30));
 	    lead.AdvSearchLastNm.sendKeys(excel.GetCellData("Lead", 1, 31));
-	    lead.AdvSearchAcctNm.sendKeys(excel.GetCellData("Lead", 1, 32));
+	    lead.AdvSearchAcctNm.sendKeys(excel.GetCellData("Lead", 1, 32)); */
+	    lead.AdvSearchFirstNm.sendKeys(excel.getCellDataUpd("Lead", "AdvSearchFirstNm", 1));
+	    lead.AdvSearchLastNm.sendKeys(excel.getCellDataUpd("Lead", "AdvSearchLastNm", 1));
+	    lead.AdvSearchAcctNm.sendKeys(excel.getCellDataUpd("Lead", "AdvSearchAcctNm", 1));
 	    
 	    //Select the Search Filter for Lead source
 	    lead.AdvSearchLeadSrc.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    WebElement SrchLeadSource=driver.findElement(By.id("chk_lead_source_leads_"+excel.GetCellData("Lead", 1, 33)));
+	   // WebElement SrchLeadSource=driver.findElement(By.id("chk_lead_source_leads_"+excel.GetCellData("Lead", 1, 33)));
+	    WebElement SrchLeadSource=driver.findElement(By.id("chk_lead_source_leads_"+excel.getCellDataUpd("Lead", "AdvSearchLeadSource", 1)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SrchLeadSource);
 	     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    
@@ -61,7 +66,8 @@ public class TC_AdvanceSearch extends Base
 	  //Select the Search Filter for Status
 	    lead.AdvSearchStatus.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    WebElement SrchStatus=driver.findElement(By.id("chk_status_leads_"+excel.GetCellData("Lead", 1, 34)));
+	    //WebElement SrchStatus=driver.findElement(By.id("chk_status_leads_"+excel.GetCellData("Lead", 1, 34)));
+	    WebElement SrchStatus=driver.findElement(By.id("chk_status_leads_"+excel.getCellDataUpd("Lead", "AdvSearchStatus", 1)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SrchStatus);
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	    
@@ -69,14 +75,16 @@ public class TC_AdvanceSearch extends Base
 	    
 	    lead.AdvSearchIndustry.click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    WebElement IndustrySel=driver.findElement(By.id("chk_industry_leads_"+excel.GetCellData("Lead", 1, 35)));
+	   // WebElement IndustrySel=driver.findElement(By.id("chk_industry_leads_"+excel.GetCellData("Lead", 1, 35)));
+	    WebElement IndustrySel=driver.findElement(By.id("chk_industry_leads_"+excel.getCellDataUpd("Lead", "AdvSearchIndustry", 1)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",IndustrySel);	     
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	    
 	    //Select the Search Filter for LeadType
 	    lead.AdvSearchLeadType.click();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    WebElement LeadType= driver.findElement(By.id("chk_type_leads_"+excel.GetCellData("Lead", 1, 36)));
+	   // WebElement LeadType= driver.findElement(By.id("chk_type_leads_"+excel.GetCellData("Lead", 1, 36)));
+	    WebElement LeadType= driver.findElement(By.id("chk_type_leads_"+excel.getCellDataUpd("Lead", "AdvSearchLeadType", 1)));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",LeadType);
 	   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	  

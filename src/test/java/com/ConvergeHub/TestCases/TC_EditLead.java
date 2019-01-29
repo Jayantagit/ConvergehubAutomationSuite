@@ -79,16 +79,19 @@ public class TC_EditLead extends Base
 	    
 	    //Select the new  Lead Status
 	    lead.LeadStatus.click();
-	    String LeadStatusNew=excel.GetCellData("Lead", 1, 10);
+	    //String LeadStatusNew=excel.GetCellData("Lead", 1, 10);
+	    String LeadStatusNew=excel.getCellDataUpd("Lead", "LeadStatusNew", 1);
 	    new Select(lead.LeadStatus).selectByVisibleText(LeadStatusNew);
 	    
 	    //Enter the new Email address
 	    lead.EmailAddress.clear();
-	    String LeadEmailNew=excel.GetCellData("Lead", 1, 11);
+	    //String LeadEmailNew=excel.GetCellData("Lead", 1, 11);
+	    String LeadEmailNew=excel.getCellDataUpd("Lead", "LeadEmailNew", 1);
 	    lead.EmailAddress.sendKeys(LeadEmailNew);
 	    
 	    //Select the new  Industry
-	    String LeadIndustryNew=excel.GetCellData("Lead", 1, 12);
+	   // String LeadIndustryNew=excel.GetCellData("Lead", 1, 12);
+	    String LeadIndustryNew=excel.getCellDataUpd("Lead", "LeadIndustryNew", 1);
 	    new Select(lead.Industry).selectByVisibleText(LeadIndustryNew);
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 	    

@@ -47,47 +47,57 @@ public class TC_AddLead extends Base
 	    
 	    //Select the Salutation
 	    lead.Salutation.click();
-	    String Salutation=excel.GetCellData("Lead", 1, 0);
+	    //String Salutation=excel.GetCellData("Lead", 1, 0);
+	    String Salutation=excel.getCellDataUpd("Lead", "Salutation", 1);
 	    new Select(lead.Salutation).selectByVisibleText(Salutation);
 	    
 	    //Enter the First and LastName
-	    String FirstName=excel.GetCellData("Lead", 1, 1);
-	    String LastName=excel.GetCellData("Lead", 1, 2);
+	   // String FirstName=excel.GetCellData("Lead", 1, 1);
+	    //String LastName=excel.GetCellData("Lead", 1, 2);
+	    String FirstName=excel.getCellDataUpd("Lead", "FirstName", 1);
+	    String LastName=excel.getCellDataUpd("Lead", "LastName", 1);
 	    lead.FirstName.sendKeys(FirstName);
 	    lead.LasttName.sendKeys(LastName);
 	    
 	    //Select the Lead Type
 	    lead.LeadType.click();
-	    String LeadType=excel.GetCellData("Lead", 1, 3);
+	    //String LeadType=excel.GetCellData("Lead", 1, 3);
+	    String LeadType=excel.getCellDataUpd("Lead", "LeadType", 1);
 	    new Select(lead.LeadType).selectByVisibleText(LeadType);
 	    
 	    //Enter the Account Name
 	    lead.AcctName.click();
-	    String AcctName=excel.GetCellData("Lead", 1, 4);
+	    //String AcctName=excel.GetCellData("Lead", 1, 4);
+	    String AcctName=excel.getCellDataUpd("Lead", "AcctName", 1);
 	    lead.AcctName.sendKeys(AcctName);
 	    
 	    //Select the Lead Source
 	    lead.LeadSource.click();
-	    String LeadSource=excel.GetCellData("Lead", 1, 5);
+	    //String LeadSource=excel.GetCellData("Lead", 1, 5);
+	    String LeadSource=excel.getCellDataUpd("Lead", "LeadSource", 1);
 	    new Select(lead.LeadSource).selectByVisibleText(LeadSource);
 	    
 	  //Select the Lead Status
 	    lead.LeadStatus.click();
-	    String LeadStatus=excel.GetCellData("Lead", 1, 6);
+	    //String LeadStatus=excel.GetCellData("Lead", 1, 6);
+	    String LeadStatus=excel.getCellDataUpd("Lead", "LeadStatus", 1);
 	    new Select(lead.LeadStatus).selectByVisibleText(LeadStatus);
 	    
 	  //Select the Industry
 	    lead.Industry.click();
-	    String Industry=excel.GetCellData("Lead", 1, 7);
+	    //String Industry=excel.GetCellData("Lead", 1, 7);
+	    String Industry=excel.getCellDataUpd("Lead", "Industry", 1);
 	    new Select(lead.Industry).selectByVisibleText(Industry);
 	    
 	   //Set the Phone No
-	    String PhoneNo=excel.GetCellData("Lead", 1, 8);
+	    //String PhoneNo=excel.GetCellData("Lead", 1, 8);
+	    String PhoneNo=excel.getCellDataUpd("Lead", "PhoneNo", 1);
 	    lead.PhoneNo.sendKeys(PhoneNo);
 	   
 	  //Set the Email Address
 	   lead.EmailAddress.click();
-	   String emailAddr=excel.GetCellData("Lead", 1, 9);
+	   //String emailAddr=excel.GetCellData("Lead", 1, 9);
+	   String emailAddr=excel.getCellDataUpd("Lead", "emailAddr", 1);
 	   lead.EmailAddress.sendKeys(emailAddr);
 	   
 	   //Click  Save Button
