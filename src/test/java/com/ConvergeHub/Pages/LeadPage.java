@@ -70,9 +70,9 @@ public class LeadPage extends Base
 	//Edit Lead
 	@FindBy(id="Edit") public WebElement EditIcon;
 	
-	//Edit Lead
+	//Basic Search
 	@FindBy(id="Searchtxt") public WebElement BasicSearchTxt;
-	@FindBy(xpath="(//a[contains(text(),'Go')])[2]") public WebElement Gobtn;
+	@FindBy(xpath="(//a[contains(text(),'Go')])[3]") public WebElement Gobtn;
 	
 	//Mass Update
 	@FindBy(id="action_html") public WebElement Actiondropdown;

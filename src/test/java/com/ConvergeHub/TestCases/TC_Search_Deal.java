@@ -29,8 +29,8 @@ public class TC_Search_Deal extends Base
 		LeadPage lead=new LeadPage();
 		DealPage deal=new DealPage();
 		
-	   /*-------------Login section needed if executed this TC separately   */
-		/*
+	   /*-------------Login section needed if executed this TC separately 
+	
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -39,17 +39,18 @@ public class TC_Search_Deal extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-	  
-	  
 	    driver.get("https://staging.convergehub.com/deals/");
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	   ---------------------------------------------------------------------- */	    
+		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/deals");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    //Click the Advanced Search button
 	    deal.AdvSearchBtn.click();
 	    
-	    //Enter/Select the search Filters	       
-	    String SrchDealNm=excel.GetCellData("Deal", 1, 4);
+	    //Enter or Select the search Filters	       
+	    //String SrchDealNm=excel.GetCellData("Deal", 1, 4);
+	    String SrchDealNm=excel.getCellDataUpd("Deal", "SearchDealName", 1);
 	    deal.SrchName.sendKeys(SrchDealNm);
 	    
 	        
@@ -57,12 +58,13 @@ public class TC_Search_Deal extends Base
 	    deal.SrchAcctName.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",deal.DealAccountNmFirst);
-	     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    	      
 	     //Select the Search Filter for DealType
 	    deal.SrchDealType.click();
 	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    String srcdealType=excel.GetCellData("Deal", 1, 5);
+	   // String srcdealType=excel.GetCellData("Deal", 1, 5);
+	    String srcdealType=excel.getCellDataUpd("Deal", "SearchDealType", 1);
 	    WebElement SrchDealTypeval=driver.findElement(By.id("chk_deal_type_deals_"+srcdealType));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SrchDealTypeval);
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -70,7 +72,8 @@ public class TC_Search_Deal extends Base
 	    //Select the Search Filter for LeadSource
 	    deal.SrchLeadSource.click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    String srcLeadSource=excel.GetCellData("Deal", 1, 6);
+	    //String srcLeadSource=excel.GetCellData("Deal", 1, 6);
+	    String srcLeadSource=excel.getCellDataUpd("Deal", "SearchLeadSource", 1);
 	    WebElement srcLeadSourceval=driver.findElement(By.id("chk_lead_source_deals_"+srcLeadSource));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",srcLeadSourceval);	     
 	    driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -78,7 +81,8 @@ public class TC_Search_Deal extends Base
 	    //Select the Search Filter for Sales Stage
 	    deal.SrchSalesStage.click();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    String srcSalesstageval=excel.GetCellData("Deal", 1, 7);
+	    //String srcSalesstageval=excel.GetCellData("Deal", 1, 7);
+	    String srcSalesstageval=excel.getCellDataUpd("Deal", "SearchSalesStage", 1);
 	    WebElement SalesStage= driver.findElement(By.id("chk_sales_stage_deals_"+srcSalesstageval));
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",SalesStage);
 	   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -124,11 +128,13 @@ public class TC_Search_Deal extends Base
 		DealPage deal=new DealPage();
 		
 	   	//Navigate to the Deal Page  
-	    driver.get("https://staging.convergehub.com/deals/");
+		driver.get("https://"+config.getProperty("Environment")+".convergehub.com/deals");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	  //Clear the Search field and Enter the Search Text for Quick Search
         deal.SrchQuiclSearch.clear();
-        String quiclsearchVal=excel.GetCellData("Deal", 1 ,8);
+       // String quiclsearchVal=excel.GetCellData("Deal", 1 ,8);
+        String quiclsearchVal=excel.getCellDataUpd("Deal", "QuickSearch", 1);
         deal.SrchQuiclSearch.sendKeys(quiclsearchVal);
 	    
 	    //Click the Go button
@@ -143,7 +149,7 @@ public class TC_Search_Deal extends Base
 	          
 	        if(deals_num.size()>0)
 	        {
-	        	System.out.println("Basic Search return result  :"+deals_num.size());  
+	        	System.out.println("Basic Search return result - :"+deals_num.size());  
 	        }
 	        else
 	        {

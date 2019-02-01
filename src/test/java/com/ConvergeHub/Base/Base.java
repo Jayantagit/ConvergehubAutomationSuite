@@ -35,8 +35,10 @@ public class Base
 	 public static  Properties config=new Properties();
 	 public static  Properties OR=new Properties();
 	 public static  Properties SavedData=new Properties();
+	 public static  Properties Deal=new Properties();
 	 public static  FileInputStream fis;
 	 public static  FileOutputStream fos;
+	 public static  FileOutputStream fosDeal;
 	 public static WebDriverWait wait;
 	 public static WebElement dropdown;
 	 public static String browser;
@@ -92,7 +94,6 @@ public class Base
 				  } 
 		    	   catch (IOException e) 
 		    	   {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				  }
 		    	   
@@ -104,10 +105,20 @@ public class Base
 				   } 
 		    	   catch (FileNotFoundException e) 
 		    	   {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				   }
-			    	  		    	   
+		    	   //----------------------Open the Property File for Deal-----------------------------------------------------		    	   
+		    	   try 
+		    	   {
+					fosDeal=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\Deal.properties",false);
+					Deal.clear(); 
+					
+				   } 
+		    	   catch (FileNotFoundException e) 
+		    	   {
+					e.printStackTrace();
+				   }
+		    	   //----------------------Checking the Browser value------------------------------------------------------------
 		    	   if(System.getenv("Browser")!=null && !System.getenv("Browser").isEmpty())
 		    	   {
 		    		   browser=System.getenv("Browser");

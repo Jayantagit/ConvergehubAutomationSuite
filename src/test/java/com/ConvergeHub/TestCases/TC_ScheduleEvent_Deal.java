@@ -27,7 +27,7 @@ public class TC_ScheduleEvent_Deal extends Base
 		LeadPage lead=new LeadPage();
 		DealPage deal=new DealPage();
 		
-		/*-------------Login section needed if executed this TC separately
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -36,10 +36,14 @@ public class TC_ScheduleEvent_Deal extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-	  
 	    driver.get("https://staging.convergehub.com/deals/");
-	    
+	    -------------------------------------------*/
+	  
+		//Navigating to the Deal List Page
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/deals");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   
+	    /*------------------Commenting the Code for Clicking the Select Dropdown of the First Deal in List--------------	
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -62,20 +66,19 @@ public class TC_ScheduleEvent_Deal extends Base
 	    //Click the Select dropdown for the First Deal in the List
 	    lead.LeadListSelection.click();
 	    
-	    //Select the ---Schedule Event option
+	    --------------------------------------------------------------------------------*/
+	    
+	    //Click the Select Dropdown of the selected Deal
+	    driver.findElement(By.id("mydiv"+Deal.getProperty("Deal_Id"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    //Select the Schedule Event option from the Select Dropdown
 	    driver.findElement(By.linkText("Schedule Event")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
-	  //Set Focus on Event Subject
-	    new Actions(driver).moveToElement(lead.EventSubject).build().perform();
-	    
-	  //Enter the value in the Subject
-	    lead.EventSubject.sendKeys("Test Event for Deal");
-	    
-	  //Enter the description in Subject
+    
+	    driver.findElement(By.id("meeting_"+Deal.getProperty("Deal_Id"))).sendKeys("Follow up Meeting");
 	    lead.EventDescription.sendKeys("Sample Description");
-	    
-	    //Click the Save button for the new Event
 	    lead.NotesSaveBtn.click();	
 	    
 	  //Validation Step-Event Schedule added successfully

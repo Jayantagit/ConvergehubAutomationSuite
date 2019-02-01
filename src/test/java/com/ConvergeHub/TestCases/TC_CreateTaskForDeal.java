@@ -13,6 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.ConvergeHub.Base.Base;
+import com.ConvergeHub.Pages.DealPage;
 import com.ConvergeHub.Pages.LeadPage;
 import com.ConvergeHub.Pages.LoginPage;
 
@@ -24,8 +25,9 @@ public class TC_CreateTaskForDeal extends Base
 	public static void CreatetaskforDeal() throws InterruptedException
 	{
 		LeadPage lead=new LeadPage();
+		DealPage deal=new DealPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -33,10 +35,17 @@ public class TC_CreateTaskForDeal extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
 	    driver.get("https://staging.convergehub.com/deals");
+	    -------------------------------------------*/
+		
+		
+		//Navigating to the Deal List Page
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/deals");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
+	    
+	    /*------------------Commenting the Code for Clicking the Select Dropdown of the First Deal in List--------------	    
 	    try
 	    {
 	        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -57,6 +66,9 @@ public class TC_CreateTaskForDeal extends Base
 	    }
 	    
 	    lead.LeadListSelection.click();
+	    --------------------------------------------------------------------------------*/
+	    driver.findElement(By.id("mydiv"+Deal.getProperty("Deal_Id"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.findElement(By.linkText("Create Task")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
