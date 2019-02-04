@@ -97,27 +97,34 @@ public class Base
 					e.printStackTrace();
 				  }
 		    	   
+		    	  /*--------------------
 		    	   try 
 		    	   {
 					fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\SavedVal.properties",false);
-					SavedData.clear(); 
+					//SavedData.clear(); 
 					
 				   } 
 		    	   catch (FileNotFoundException e) 
 		    	   {
 					e.printStackTrace();
 				   }
+				   
+				   ------------------------------*/
+		    	   
+		    	   /*--------------------
 		    	   //----------------------Open the Property File for Deal-----------------------------------------------------		    	   
 		    	   try 
 		    	   {
 					fosDeal=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\Deal.properties",false);
-					Deal.clear(); 
+					//Deal.clear(); 
 					
 				   } 
 		    	   catch (FileNotFoundException e) 
 		    	   {
 					e.printStackTrace();
 				   }
+				   
+				   ------------------------------*/
 		    	   //----------------------Checking the Browser value------------------------------------------------------------
 		    	   if(System.getenv("Browser")!=null && !System.getenv("Browser").isEmpty())
 		    	   {

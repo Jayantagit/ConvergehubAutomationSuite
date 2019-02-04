@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import com.ConvergeHub.Base.Base;
 import com.ConvergeHub.Pages.DealPage;
 import com.ConvergeHub.Pages.LoginPage;
+import com.ConvergeHub.Utilities.TestUtil;
 
 
 public class TC_AddDeal extends Base  
@@ -103,14 +104,16 @@ public class TC_AddDeal extends Base
 		System.out.println(currentCountDeal);
 		if(currentCountDeal>1)
 		{
-			Deal.setProperty("Deal_Id_New", Deal_ID);			
+			//Deal.setProperty("Deal_Id_New", Deal_ID);
+			TestUtil.writeProperty("Deal_Id_New", Deal_ID);
 		}
 		else
 		{
-			Deal.setProperty("Deal_Id", Deal_ID);
+			//Deal.setProperty("Deal_Id", Deal_ID);
+			TestUtil.writeProperty("Deal_Id", Deal_ID);
 		}
 		
-		
+		/*
 		try 
 		{			
 			Deal.store(fosDeal,"Saved");
@@ -120,6 +123,7 @@ public class TC_AddDeal extends Base
 			
 			e.printStackTrace();
 		}
+		*/
 	    
 	
 	}

@@ -69,7 +69,7 @@ public class TC_ScheduleEvent_Deal extends Base
 	    --------------------------------------------------------------------------------*/
 	    
 	    //Click the Select Dropdown of the selected Deal
-	    driver.findElement(By.id("mydiv"+Deal.getProperty("Deal_Id"))).click();
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Deal_Id"))).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    //Select the Schedule Event option from the Select Dropdown
@@ -77,7 +77,7 @@ public class TC_ScheduleEvent_Deal extends Base
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
     
-	    driver.findElement(By.id("meeting_"+Deal.getProperty("Deal_Id"))).sendKeys("Follow up Meeting");
+	    driver.findElement(By.id("meeting_"+SavedData.getProperty("Deal_Id"))).sendKeys("Follow up Meeting");
 	    lead.EventDescription.sendKeys("Sample Description");
 	    lead.NotesSaveBtn.click();	
 	    

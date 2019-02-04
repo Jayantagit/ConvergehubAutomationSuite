@@ -1,6 +1,8 @@
 package com.ConvergeHub.Utilities;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
 
@@ -36,5 +38,39 @@ public class TestUtil extends Base
 	   
 	    return screenShotImageName;
 	   
+	}
+	
+	public static void writeProperty(String key,String value)
+	{
+ 	   try 
+ 	   {
+			fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\SavedVal.properties",false);
+			//SavedData.clear(); 
+			
+ 	   } 
+ 	   catch (FileNotFoundException e) 
+ 	   {
+			e.printStackTrace();
+		}
+		SavedData.setProperty(key,value);
+		try 
+		{
+			SavedData.store(fos,"Saved");
+		}
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try 
+		{
+			fos.close();
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

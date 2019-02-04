@@ -12,6 +12,7 @@ public class ContactPage extends Base
 	@FindBy(id="salutation_select_drp_dwn") public WebElement Salutation;
 	@FindBy(id="first_name") public WebElement FirstName;
 	@FindBy(id="last_name") public WebElement LastName;
+	@FindBy(xpath="//div[@class='selectbox' and @xpath='3']") public WebElement ContactPhoneType;
 	@FindBy(id="phoneNew1") public WebElement PhoneNo;
 	@FindBy(id="emailAddress1") public WebElement EmailAddress;
 	@FindBy(xpath="//button[@id='accountValidation' and @type='submit']") public WebElement ContactSaveBtn;

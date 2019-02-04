@@ -32,8 +32,7 @@ public class TC_MassUpdateForDeal extends Base
 		LeadPage lead=new LeadPage();
 		DealPage deal=new DealPage();
 		
-		//Login section-To run the test case separately
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -42,10 +41,9 @@ public class TC_MassUpdateForDeal extends Base
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-	    //---------------End of Login
+	     -------------------------------------------*/
 	   
-	  
+		/*-
 	    driver.get("https://staging.convergehub.com/deals/");
 	    
 	    try
@@ -68,33 +66,32 @@ public class TC_MassUpdateForDeal extends Base
 	    	e.printStackTrace();
 	    }
 	    
-	    lead.Actiondropdown.click(); //Click the Action dropdown
-	    driver.findElement(By.linkText("Mass Update")).click();
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    
-	    //Select the Deal Type
-	    String DealTypeval=excel.GetCellData("Deal", 1, 9);
-	   // deal.MassUpdDealType.click();
-	    new Select(deal.MassUpdDealType).selectByVisibleText(DealTypeval);
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    
-	    //Select the LeadSource
-	    String DealSourceeval=excel.GetCellData("Deal", 1, 10);
-	    System.out.println("Selected Lead Source value:="+DealSourceeval);
-	    //deal.DealLeadSource.click();
-	    new Actions(driver).moveToElement(deal.MassUpdLeadSource);
-	    new Select(deal.MassUpdLeadSource).selectByVisibleText(DealSourceeval);
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    
-	    //Select the Sales Stage
-	    String DealSalesstageval=excel.GetCellData("Deal", 1, 11);
-	    //deal.MassUpdSalesStage.click();
-	    new Actions(driver).moveToElement(deal.MassUpdSalesStage);
-	    new Select(deal.MassUpdSalesStage).selectByVisibleText(DealSalesstageval);
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    
-	    //Click the save button
-	    lead.MassUpdSave.click();
+	    -------------------------------------------*/
+		
+	    	driver.get("https://"+config.getProperty("Environment")+".convergehub.com/deals");
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Deal_Id"))).click();
+			driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Deal_Id_New"))).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		    lead.Actiondropdown.click(); //Click the Action dropdown
+		    driver.findElement(By.linkText("Mass Update")).click();
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		    
+		    //Update the Deal Type
+		    String dealType=excel.getCellDataUpd("Deal", "MassUpdDealType", 1);
+		    new Select(deal.MassUpdDealType).selectByVisibleText(dealType);
+		    
+		    //Update the Lead Source
+		    String leadSource=excel.getCellDataUpd("Deal", "MassUpdateLeadSource", 1);
+		    new Select(deal.MassUpdLeadSource).selectByVisibleText(leadSource);
+		    
+		    //Update the Deal Sales Stage
+		    String salesStage=excel.getCellDataUpd("Deal", "MassUpdateSalesStage", 1);
+		    new Select(deal.MassUpdSalesStage).selectByVisibleText(salesStage);
+				   
+		    //Click the save button
+		    lead.MassUpdSave.click();
 	    
 	    
 	    for (String winHandle : driver.getWindowHandles()) 

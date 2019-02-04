@@ -72,7 +72,8 @@ public class LeadPage extends Base
 	
 	//Basic Search
 	@FindBy(id="Searchtxt") public WebElement BasicSearchTxt;
-	@FindBy(xpath="(//a[contains(text(),'Go')])[3]") public WebElement Gobtn;
+	//@FindBy(xpath="(//a[contains(text(),'Go')])[3]") public WebElement Gobtn;
+	@FindBy(xpath="//div[@class='listing-top']/ul/li[2]/a[contains(text(),'Go')]") public WebElement Gobtn;
 	
 	//Mass Update
 	@FindBy(id="action_html") public WebElement Actiondropdown;

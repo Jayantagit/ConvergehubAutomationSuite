@@ -67,7 +67,7 @@ public class TC_CreateTaskForDeal extends Base
 	    
 	    lead.LeadListSelection.click();
 	    --------------------------------------------------------------------------------*/
-	    driver.findElement(By.id("mydiv"+Deal.getProperty("Deal_Id"))).click();
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Deal_Id"))).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.findElement(By.linkText("Create Task")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

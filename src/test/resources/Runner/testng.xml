@@ -8,8 +8,9 @@
   <test  name="Lead Test Cases">
   <classes>
   <!--Lead Test Cases      --> 	
-  <!--	   	
-      <class name="com.ConvergeHub.TestCases.TC_AddLead"/>        
+  	   	
+      <class name="com.ConvergeHub.TestCases.TC_AddLead"/> 
+          
       <class name="com.ConvergeHub.TestCases.TC_EditLead"/> 
       <class name="com.ConvergeHub.TestCases.TC_CreateTaskForLead"/>
       <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToLead"/>
@@ -21,6 +22,7 @@
       <class name="com.ConvergeHub.TestCases.TC_BasicSearch"/>                    
       <class name="com.ConvergeHub.TestCases.TC_AdvanceSearch"/>       
       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate"/> 
+    <!--      
    -->   
      	
    </classes>
@@ -29,23 +31,24 @@
  <test  name="Deal Test Cases">
  <classes> 
   <!--Deal Test Cases      -->   
-  
+ 
        <class name="com.ConvergeHub.TestCases.TC_AddDeal"/>        
        <class name="com.ConvergeHub.TestCases.TC_CreateTaskForDeal"/> 
        <class name="com.ConvergeHub.TestCases.TC_Add_Comment_NoteToDeal"/>       
        <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Deal"/>
-       <class name="com.ConvergeHub.TestCases.TC_Search_Deal"/>  
-       <!-- 
-       <class name="com.ConvergeHub.TestCases.TC_MassUpdateForDeal"/>
-       -->    
+       <class name="com.ConvergeHub.TestCases.TC_Search_Deal"/>          
+       <class name="com.ConvergeHub.TestCases.TC_MassUpdateForDeal"/>  
+  <!--       
+  -->            
   </classes>
   </test> <!-- Test -->
   
  <test  name="Contact Test Cases">
  <classes> 
   <!--Contact Test Cases        -->
-   <!--
+   
        <class name="com.ConvergeHub.TestCases.TC_AddContacts"/>  
+ <!--      
        <class name="com.ConvergeHub.TestCases.TC_CreateTaskForContact"/> 
        <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToContact"/> 
        <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Contact"/> 

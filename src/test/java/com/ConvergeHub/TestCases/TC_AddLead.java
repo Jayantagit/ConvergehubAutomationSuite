@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 import com.ConvergeHub.Base.Base;
 import com.ConvergeHub.Pages.LeadPage;
 import com.ConvergeHub.Pages.LoginPage;
+import com.ConvergeHub.Utilities.TestUtil;
 
 
 public class TC_AddLead extends Base  
@@ -124,17 +125,19 @@ public class TC_AddLead extends Base
 		{
 			//SavedData.clear();
 			//SavedData.put("Lead_Id_New", Lead_ID);
-			SavedData.setProperty("Lead_Id_New", Lead_ID);
+			//SavedData.setProperty("Lead_Id_New", Lead_ID);
+			TestUtil.writeProperty("Lead_Id_New", Lead_ID);
 			
 			
 		}
 		else
 		{
 			//SavedData.put("Lead_Id", Lead_ID);
-			SavedData.setProperty("Lead_Id", Lead_ID);
+			//SavedData.setProperty("Lead_Id", Lead_ID);
+			TestUtil.writeProperty("Lead_Id", Lead_ID);
 		}
 		
-		
+		/*
 		try 
 		{			
 			SavedData.store(fos,"Saved");
@@ -144,6 +147,7 @@ public class TC_AddLead extends Base
 			
 			e.printStackTrace();
 		}
+		*/
 		
 	
 	    Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Lead Created");//Validation that Lead edited successfully

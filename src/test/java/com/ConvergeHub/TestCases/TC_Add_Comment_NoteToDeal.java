@@ -67,7 +67,7 @@ public class TC_Add_Comment_NoteToDeal extends Base
 	    
 	   lead.CommentIcon.click();
 	    --------------------------------------------------------------------------------*/
-	    driver.findElement(By.id("mydiv"+Deal.getProperty("Deal_Id"))).click();
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Deal_Id"))).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
 	    driver.findElement(By.linkText("Add Comment")).click();
@@ -134,7 +134,7 @@ public class TC_Add_Comment_NoteToDeal extends Base
 	        for(int cnt=0;cnt<Leads_num.size();cnt++)
 	        {
 	           String val=Leads_num.get(cnt).getAttribute("value");
-	           if(val.contains(Deal.getProperty("Deal_Id")))
+	           if(val.contains(SavedData.getProperty("Deal_Id")))
 	           {
 	        	   rowcnt=cnt+1;
 	        	   break;
@@ -148,7 +148,7 @@ public class TC_Add_Comment_NoteToDeal extends Base
 	    	e.printStackTrace();
 	    }
 	    
-	    driver.findElement(By.id("list_checkbox_"+Deal.getProperty("Deal_Id"))).click();
+	    driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Deal_Id"))).click();
 	    String noteicon="(//span[contains(text(),' Notes')])["+rowcnt+"]";
 	    System.out.println(noteicon);
 	    driver.findElement(By.xpath(noteicon)).click();	  
