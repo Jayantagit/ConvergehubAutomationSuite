@@ -29,7 +29,7 @@ public class TC_CreateTaskForContact extends Base
 		ContactPage contact=new ContactPage();
 		LeadPage lead=new LeadPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -37,9 +37,14 @@ public class TC_CreateTaskForContact extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));	  
 	    driver.get("https://staging.convergehub.com/contacts");
+	    -------------------------------------------*/
+		
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/contacts");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 
+		 /* 
 	    
 	    try
 	    {
@@ -59,8 +64,14 @@ public class TC_CreateTaskForContact extends Base
 	    {
 	    	e.printStackTrace();
 	    }
-	    
 	    lead.LeadListSelection.click();
+	    
+	    */
+		 
+		//From the Select dropdown -select the option-Create Task for the generated lead
+		 driver.findElement(By.id("mydiv"+SavedData.getProperty("Contact_ID"))).click();
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		 
 	    driver.findElement(By.linkText("Create Task")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    

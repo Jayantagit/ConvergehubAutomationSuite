@@ -17,6 +17,9 @@ public class ContactPage extends Base
 	@FindBy(id="emailAddress1") public WebElement EmailAddress;
 	@FindBy(xpath="//button[@id='accountValidation' and @type='submit']") public WebElement ContactSaveBtn;
 	
+	//Mass Update
+	@FindBy(id="domfield_lead_source_select_drp_dwn") public WebElement massUpdLeadSrc;
+	
 	
 	public ContactPage() 
 	{

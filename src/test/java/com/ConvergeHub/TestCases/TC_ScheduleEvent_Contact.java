@@ -37,10 +37,15 @@ public class TC_ScheduleEvent_Contact extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]"))); 
 	    driver.get("https://staging.convergehub.com/contacts/");
+	    ------------------------------------------ */
+		
+		//Navigating to the Contact List Page
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/contacts/");
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    
+	    /*------------------Commenting the Code for Clicking the Select Dropdown of the First Contact in List--------------	
 	    
 	    try
 	    {
@@ -64,10 +69,21 @@ public class TC_ScheduleEvent_Contact extends Base
 	    //Click the Select dropdown for the First Contact in the List
 	    lead.LeadListSelection.click();
 	    
-	    //Select the ---Schedule Event option
+	     --------------------------------------------------------------------------------*/
+	    //Click the Select Dropdown of the selected Contact
+	    driver.findElement(By.id("mydiv"+SavedData.getProperty("Contact_ID"))).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+	    
+	    
+	    //Select the ---Schedule Event option from the Select Dropdown
 	    driver.findElement(By.linkText("Schedule Event")).click();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    
+	    driver.findElement(By.id("meeting_"+SavedData.getProperty("Contact_ID"))).sendKeys("Follow up Meeting");
+	    lead.EventDescription.sendKeys("Sample Description");
+	    lead.NotesSaveBtn.click();	
+	    
+	    /*---------------------------------------------------------------------------------------------------
 	  //Set Focus on Event Subject
 	    new Actions(driver).moveToElement(lead.EventSubject).build().perform();
 	    
@@ -79,6 +95,7 @@ public class TC_ScheduleEvent_Contact extends Base
 	    
 	    //Click the Save button for the new Event
 	    lead.NotesSaveBtn.click();	
+	  -----------------------------------------------------------------------------------------------------*/ 
 	    
 	  //Validation Step-Event Schedule added successfully
 	    Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Event Relation Added");

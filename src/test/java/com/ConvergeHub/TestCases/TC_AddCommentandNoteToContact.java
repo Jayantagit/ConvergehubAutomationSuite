@@ -27,7 +27,7 @@ public class TC_AddCommentandNoteToContact extends Base
 		LeadPage lead=new LeadPage();
 		ContactPage contact=new ContactPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -35,9 +35,14 @@ public class TC_AddCommentandNoteToContact extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));	  
 	    driver.get("https://staging.convergehub.com/contacts");
+	    -------------------------------------------*/
+		
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/contacts");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 
+		 /*---------------------
 	    
 	    try
 	    {
@@ -58,12 +63,18 @@ public class TC_AddCommentandNoteToContact extends Base
 	    	e.printStackTrace();
 	    }
 	    
-	   lead.CommentIcon.click();
-	   lead.CommentTextBox.sendKeys("Test Comments\n Entered");
-	   lead.CommentSaveButton.click();
+	   lead.CommentIcon.click();	   
+	   */
+		 
+	 driver.findElement(By.id("mydiv"+SavedData.getProperty("Contact_ID"))).click();
+	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	 driver.findElement(By.linkText("Add Comments")).click();
+	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	 
+	 lead.CommentTextBox.sendKeys("Test Comments\n Entered");
+	 lead.CommentSaveButton.click();
 	    
 	    
-	    Assert.assertNotNull(driver.findElement(By.xpath("//h1[@class='listcomment_heading']")));
+	 Assert.assertNotNull(driver.findElement(By.xpath("//h1[@class='listcomment_heading']")));
 	    
 	}
 	
@@ -74,7 +85,7 @@ public class TC_AddCommentandNoteToContact extends Base
 	{
 		LeadPage lead=new LeadPage();
 		
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -82,10 +93,13 @@ public class TC_AddCommentandNoteToContact extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));*/
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));	  
 	    driver.get("https://staging.convergehub.com/contacts");
-	    
+	    --------------------------------------------------------*/
+		 driver.get("https://"+config.getProperty("Environment")+".convergehub.com/contacts");
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 
+	    /*
 	    try
 	    {
 	        List<WebElement> contacts_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -106,6 +120,36 @@ public class TC_AddCommentandNoteToContact extends Base
 	    }
 	    
 	    lead.NotesIcon.click();
+	    */
+		int rowcnt=0;
+		    
+		    try
+		    {
+		        List<WebElement> Leads_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
+		        for(int cnt=0;cnt<Leads_num.size();cnt++)
+		        {
+		           String val=Leads_num.get(cnt).getAttribute("value");
+		           if(val.contains(SavedData.getProperty("Contact_ID")))
+		           {
+		        	   rowcnt=cnt+1;
+		        	   break;
+		           }
+		     
+		        }
+		    	
+		    }
+		    catch(Exception e)
+		    {
+		    	e.printStackTrace();
+		    }
+		    
+		//lead.NotesIcon.click();
+		driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Contact_ID"))).click();
+		String noteicon="(//span[contains(text(),' Notes')])["+rowcnt+"]";
+		System.out.println(noteicon);
+		driver.findElement(By.xpath(noteicon)).click();		  
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
+		 
 	    lead.NotesSubject.sendKeys("Test Notes");
 	    lead.NotesDescription.sendKeys("Sample Description /n Entered");
 	    lead.NotesSaveBtn.click();

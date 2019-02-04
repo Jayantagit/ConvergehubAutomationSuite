@@ -74,6 +74,13 @@ public class TC_AddContacts extends Base
 	   String contactEmail=excel.getCellDataUpd("Contact", "EmailAddress", 1);
 	   contact.EmailAddress.clear();
 	   contact.EmailAddress.sendKeys(contactEmail);
+	   
+	   //Clickon the Other tab
+	   driver.findElement(By.linkText("Other")).click();
+	   driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	   String leadSource=excel.getCellDataUpd("Contact", "LeadSource", 1);
+	   new Select(deal.DealLeadSource).selectByVisibleText(leadSource);
+	   
     
 	   contact.ContactSaveBtn.click();
 	    
