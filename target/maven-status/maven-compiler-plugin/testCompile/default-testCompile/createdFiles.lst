@@ -27,6 +27,7 @@ com\ConvergeHub\TestCases\TC_AddLead.class
 com\ConvergeHub\TestCases\TC_EditLead.class
 com\ConvergeHub\TestCases\TC_MassUpdateForDeal.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate.class
+com\ConvergeHub\TestCases\TC_Search_MassUpdate_MergeDuplicate_Account.class
 com\ConvergeHub\Pages\LoginPage.class
 com\ConvergeHub\TestCases\TC_BasicSearch.class
 com\ConvergeHub\TestCases\TC_AddTarget_Convert.class

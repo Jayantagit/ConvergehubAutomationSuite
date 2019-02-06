@@ -33,6 +33,16 @@ public class AccountPage extends Base
 	@FindBy(id="emailAddress1_popup") public WebElement qvacctEmailAddr;//Edit
 	@FindBy(id="phoneNew1_popup") public WebElement qvacctPhone;//Edit
 	
+	//Search Page
+	@FindBy(id="name_adv") public WebElement srchAcctName;//Edit
+	@FindBy(id="industry_field") public WebElement srchIndustry;//
+	@FindBy(id="account_type_field") public WebElement srchAccountType;//
+	
+	//Mass Update
+	@FindBy(id="domfield_account_type_select_drp_dwn") public WebElement massupdAccountType;//Select
+	@FindBy(id="domfield_industry_select_drp_dwn") public WebElement massupdIndustry;//Select
+	
+	
 	public AccountPage() 
 	{
 		PageFactory.initElements(driver, this);

@@ -60,8 +60,9 @@
  <test  name="Target Test Cases" group-by-instances="true">
  <classes> 
   <!--Target Test Cases        -->
-  <!--
+ 
        <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>  
+  <!--      
   -->    
   </classes>
   </test> <!-- Test -->
@@ -69,13 +70,14 @@
  <test  name="Account Test Cases" group-by-instances="true" preserve-order="true">
  <classes> 
   <!--Account Test Cases        -->
+   <!-- 
   
        <class name="com.ConvergeHub.TestCases.TC_AddAccount"/>       
        <class name="com.ConvergeHub.TestCases.TC_Task_Comments_Notes_Event_List_ForAccount"/>      
        <class name="com.ConvergeHub.TestCases.TC_AddAccount_QuickView"/> 
-        <!-- 
+       <class name="com.ConvergeHub.TestCases.TC_Search_MassUpdate_MergeDuplicate_Account"/>  
        <class name="com.ConvergeHub.TestCases.TC_DeleteAccount"/> 
-       <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate_Account"/>  
+    
   -->       
   </classes>
   </test> <!-- Test -->

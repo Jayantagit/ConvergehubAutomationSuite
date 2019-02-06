@@ -23,17 +23,17 @@ import com.ConvergeHub.Pages.LoginPage;
 
 public class TC_DeleteAccount extends Base  
 {    
-	@Test(groups={"Regression"},description="Delete Account")
+	@Test(priority = 10,groups={"Regression"},description="Delete Account")
 	
 	public static void DeleteAccount() throws InterruptedException
 	{
+		//Initialize the Page Classes
 		DealPage deal=new DealPage();
 		ContactPage contact=new ContactPage();
 		LeadPage lead=new LeadPage();
 		AccountPage account=new AccountPage();
 		
-		//Login section to Test the Delete account Test separately
-		/*
+		/*-------------------------Login Code
 		LoginPage login=new LoginPage();		
 		login.username.clear();
 	    login.username.sendKeys(config.getProperty("UserName"));
@@ -41,12 +41,19 @@ public class TC_DeleteAccount extends Base
 	    login.login.click();
 	    System.out.println("Successfully Logged");
 	    wait=new WebDriverWait(driver,20); 
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
-	    */
-		//Login Section-End
-	  
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));	    
 	    driver.get("https://staging.convergehub.com/accounts/");
+	    -------------------------------------------*/
+		
+	 //Navigate to the Account List Page   
+	   driver.get("https://"+config.getProperty("Environment")+".convergehub.com/accounts/");
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		   
+
+	//Select the Merged account id
+		driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Account_ID_Merged"))).click();
 	    
+		/*
 	    try
 	    {
 	        List<WebElement> account_num=driver.findElements(By.xpath(OR.getProperty("LeadCheckbox")));
@@ -68,6 +75,8 @@ public class TC_DeleteAccount extends Base
 	    
 	    //Select the First Account in the List
 	   // account.acctCheckbox.click();
+	    
+	    */
 	   
 	  //Click the Mass Delete icon for First Account in the List
 	    account.acctMassDelicon.click();
