@@ -5,7 +5,7 @@
        <listener class-name="com.ConvergeHub.Listeners.CustomListeners"/>
   </listeners>
 
-  <test  name="Lead Test Cases">
+  <test  name="Lead Test Cases" group-by-instances="true">
   <classes>
   <!--Lead Test Cases      --> 	
    <!-- 	   	
@@ -27,7 +27,7 @@
    </classes>
    </test> 
      
- <test  name="Deal Test Cases">
+ <test  name="Deal Test Cases" group-by-instances="true">
  <classes> 
   <!--Deal Test Cases      -->   
    <!-- 
@@ -42,22 +42,22 @@
   </classes>
   </test> <!-- Test -->
   
- <test  name="Contact Test Cases">
+ <test  name="Contact Test Cases" group-by-instances="true">
  <classes> 
   <!--Contact Test Cases        -->
-   
+   <!-- 
        <class name="com.ConvergeHub.TestCases.TC_AddContacts"/>      
        <class name="com.ConvergeHub.TestCases.TC_CreateTaskForContact"/>        
        <class name="com.ConvergeHub.TestCases.TC_AddCommentandNoteToContact"/>       
        <class name="com.ConvergeHub.TestCases.TC_ScheduleEvent_Contact"/> 
        <class name="com.ConvergeHub.TestCases.TC_ReferContact_AddToList"/> 
        <class name="com.ConvergeHub.TestCases.TC_Search_MassUpdate_MergeDuplicate_Contact"/> 
-  <!--       
+        
   --> 
   </classes>
  </test> <!-- Test -->
  
- <test  name="Target Test Cases">
+ <test  name="Target Test Cases" group-by-instances="true">
  <classes> 
   <!--Target Test Cases        -->
   <!--
@@ -66,12 +66,14 @@
   </classes>
   </test> <!-- Test -->
   
- <test  name="Account Test Cases">
+ <test  name="Account Test Cases" group-by-instances="true" preserve-order="true">
  <classes> 
   <!--Account Test Cases        -->
-  <!--
-       <class name="com.ConvergeHub.TestCases.TC_AddAccount"/>  
-       <class name="com.ConvergeHub.TestCases.TC_CreateTask_Comments_Notes_ScheduleEvent_ForAccount"/>
+  
+       <class name="com.ConvergeHub.TestCases.TC_AddAccount"/>       
+       <class name="com.ConvergeHub.TestCases.TC_Task_Comments_Notes_Event_List_ForAccount"/>      
+       <class name="com.ConvergeHub.TestCases.TC_AddAccount_QuickView"/> 
+        <!-- 
        <class name="com.ConvergeHub.TestCases.TC_DeleteAccount"/> 
        <class name="com.ConvergeHub.TestCases.TC_MergeDuplicate_Account"/>  
   -->       

@@ -3,13 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ConvergeHub.TestCases.TC_AddLead_QuickView">
+      <class name="com.ConvergeHub.TestCases.TC_Task_Comments_Notes_Event_AddToList_ForAccount">
         <methods>
           <include name="TearDown"/>
+          <include name="AddCommentToAccount"/>
+          <include name="AddNoteToAccount"/>
+          <include name="CreatetaskForAccount"/>
+          <include name="AddAccountToList"/>
           <include name="setUp"/>
-          <include name="LeadCreationQuickView"/>
+          <include name="ScheduleEventForAccount"/>
         </methods>
-      </class> <!-- com.ConvergeHub.TestCases.TC_AddLead_QuickView -->
+      </class> <!-- com.ConvergeHub.TestCases.TC_Task_Comments_Notes_Event_AddToList_ForAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

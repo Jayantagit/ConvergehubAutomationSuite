@@ -81,8 +81,8 @@ public class TC_AddContacts extends Base
 	   String leadSource=excel.getCellDataUpd("Contact", "LeadSource", 1);
 	   new Select(deal.DealLeadSource).selectByVisibleText(leadSource);
 	   
-    
-	   contact.ContactSaveBtn.click();
+	   //Click on the Save Button
+	   	contact.ContactSaveBtn.click();
 	    
 	    //Assertion statement to be added for the verification
 	    WebDriverWait wait1 = new WebDriverWait (driver, 20);

@@ -23,6 +23,16 @@ public class AccountPage extends Base
 	@FindBy(xpath="(//input[@name='list_checkbox[]'])[1]") public WebElement acctCheckbox;//First checkbox  in the List
 	@FindBy(xpath="(//a[@title='Mass Delete'])[1]") public WebElement acctMassDelicon;//First MassDelete icon in the List
 	
+	//Quick View
+	@FindBy(xpath="//a[@class='icon edit-icon'and @title='Create Account in Quick View']") public WebElement quickViewIcon;
+	@FindBy(id="name_popup") public WebElement qvacctName;//Edit
+	@FindBy(id="account_type_popup_select_drp_dwn") public WebElement qvacctType;//Select
+	@FindBy(id="account_status_popup_select_drp_dwn") public WebElement qvacctStatus;//Select
+	@FindBy(id="lead_source_popup_select_drp_dwn") public WebElement qvacctLeadSrc;//Select
+	@FindBy(id="comment") public WebElement qvacctComments;//TextArea
+	@FindBy(id="emailAddress1_popup") public WebElement qvacctEmailAddr;//Edit
+	@FindBy(id="phoneNew1_popup") public WebElement qvacctPhone;//Edit
+	
 	public AccountPage() 
 	{
 		PageFactory.initElements(driver, this);

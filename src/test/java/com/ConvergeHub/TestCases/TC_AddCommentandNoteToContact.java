@@ -20,7 +20,7 @@ import com.ConvergeHub.Pages.LoginPage;
 
 public class TC_AddCommentandNoteToContact extends Base  
 {    
-	@Test(groups={"Regression"},description="Add Comment To Contact")
+	@Test(priority=0,groups={"Regression"},description="Add Comment To Contact")
 	
 	public static void AddCommentToContact() throws InterruptedException
 	{
@@ -79,7 +79,7 @@ public class TC_AddCommentandNoteToContact extends Base
 	}
 	
 	
-@Test(groups={"Regression"},description="Add Note To Contact")
+@Test(priority=1,groups={"Regression"},description="Add Note To Contact")
 	
 	public static void AddNoteToContact() throws InterruptedException
 	{
