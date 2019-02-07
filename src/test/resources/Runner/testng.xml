@@ -60,9 +60,9 @@
  <test  name="Target Test Cases" group-by-instances="true">
  <classes> 
   <!--Target Test Cases        -->
- 
+  <!-- 
        <class name="com.ConvergeHub.TestCases.TC_AddTarget_Convert"/>  
-  <!--      
+      
   -->    
   </classes>
   </test> <!-- Test -->
@@ -81,4 +81,11 @@
   -->       
   </classes>
   </test> <!-- Test -->
+  
+  <test  name="Case Test Cases" group-by-instances="true">
+ <classes> 
+  <!--Case Test Cases        -->
+        <class name="com.ConvergeHub.TestCases.TC_Add_Case"/>  
+  </classes>
+  </test> <!-- Test --> 
 </suite> <!-- Suite -->
