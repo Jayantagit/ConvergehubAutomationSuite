@@ -1,5 +1,4 @@
 com\ConvergeHub\Pages\TargetPage.class
-com\ConvergeHub\TestCases\TC_Add_Case.class
 com\ConvergeHub\Pages\DealPage.class
 com\ConvergeHub\TestCases\TC_AddAccount_QuickView.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate_Account.class
@@ -23,6 +22,7 @@ com\ConvergeHub\TestCases\TC_AddCommentandNoteToLead.class
 com\ConvergeHub\Utilities\SendEmail$1.class
 com\ConvergeHub\TestCases\TC_ReferContact_AddToList.class
 com\ConvergeHub\TestCases\TC_AddDeal.class
+com\ConvergeHub\TestCases\TC_Add_Case_KnowledgeBase.class
 Rough\rough.class
 com\ConvergeHub\TestCases\TC_AddAccount.class
 com\ConvergeHub\TestCases\TC_AddLead.class

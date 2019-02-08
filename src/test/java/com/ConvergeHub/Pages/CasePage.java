@@ -19,6 +19,14 @@ public class CasePage extends Base
 	@FindBy(id="priority_select_drp_dwn") public WebElement casePriority;//Select
 	@FindBy(xpath="(//button[@id='accountValidation'])[3]") public WebElement caseSaveBtn;//Select
 	
+	//Knowledge Base-Add
+	@FindBy(id="kb_subject") public WebElement kbSubject;//Edit
+	@FindBy(id="category_select_drp_dwn") public WebElement kbCategory;//Select
+	//KB Description -iframe ID-kb_description_ifr
+	////div[@class='fakefile']/a[contains(text(),'Browse')]
+	@FindBy(id="support_files_1") public WebElement kbFile;//Select
+	@FindBy(xpath="//div[@class='fakefile']/a[contains(text(),'Browse')]") public WebElement btnBrowse;//Button
+	@FindBy(id="projectValidation") public WebElement btnSave;//Button
 	
 	public CasePage() 
 	{
