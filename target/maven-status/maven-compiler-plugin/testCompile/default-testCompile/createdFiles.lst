@@ -36,6 +36,7 @@ com\ConvergeHub\TestCases\TC_AddTarget_Convert.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
+com\ConvergeHub\TestCases\TC_Collaboration.class
 Rough\RoughOther.class
 com\ConvergeHub\TestCases\TC_ReferLead_AddToList.class
 com\ConvergeHub\Utilities\TestConfig.class
@@ -48,5 +49,6 @@ com\ConvergeHub\Utilities\MonitoringMail$SMTPAuthenticator.class
 com\ConvergeHub\TestCases\TC_Search_MassUpdate_MergeDuplicate_Contact.class
 com\ConvergeHub\Utilities\SendEmail.class
 com\ConvergeHub\Listeners\CustomListeners.class
+com\ConvergeHub\Pages\CollaborationPage.class
 com\ConvergeHub\TestCases\TC_MassUpdateForLead.class
 com\ConvergeHub\TestCases\TC_CreateTaskForDeal.class
