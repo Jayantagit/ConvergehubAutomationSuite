@@ -111,7 +111,7 @@ public class LeadPage extends Base
 	public LeadPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Lead Page Initialized.");
 	}
 
 }

@@ -189,7 +189,7 @@ public class TC_Collaboration extends Base
 
 @Test(priority = 2,groups={"Regression"},description="Edit a Partner")
 
-public static void editLead() throws InterruptedException
+public static void editPartner() throws InterruptedException
 {
 	LeadPage lead=new LeadPage();
 	AccountPage account=new AccountPage();

@@ -24,7 +24,7 @@ public class CollaborationPage extends Base
 	public CollaborationPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Collaboration Page Initialized.");
 	}
 
 }

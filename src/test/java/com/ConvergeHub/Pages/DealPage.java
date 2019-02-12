@@ -40,7 +40,7 @@ public class DealPage extends Base
 	public DealPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Deal Page Initialized.");
 	}
 
 }

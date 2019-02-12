@@ -29,7 +29,7 @@ public class TargetPage extends Base
 	public TargetPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Target Page Initialized.");
 	}
 
 }

@@ -15,7 +15,7 @@ public class LoginPage extends Base
 	public LoginPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Login Page Initialized.");
 	}
 
 

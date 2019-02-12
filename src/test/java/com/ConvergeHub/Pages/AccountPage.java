@@ -46,7 +46,7 @@ public class AccountPage extends Base
 	public AccountPage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Account Page Initialized.");
 	}
 
 }

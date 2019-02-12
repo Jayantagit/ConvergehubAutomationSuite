@@ -32,6 +32,7 @@ com\ConvergeHub\TestCases\TC_MergeDuplicate.class
 com\ConvergeHub\TestCases\TC_Search_MassUpdate_MergeDuplicate_Account.class
 com\ConvergeHub\Pages\LoginPage.class
 com\ConvergeHub\TestCases\TC_BasicSearch.class
+com\ConvergeHub\Pages\ActivitiesPage.class
 com\ConvergeHub\TestCases\TC_AddTarget_Convert.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.class
@@ -41,6 +42,7 @@ Rough\RoughOther.class
 com\ConvergeHub\TestCases\TC_ReferLead_AddToList.class
 com\ConvergeHub\Utilities\TestConfig.class
 com\ConvergeHub\TestCases\TC_Add_Comment_NoteToDeal.class
+com\ConvergeHub\TestCases\TC_Activities.class
 com\ConvergeHub\TestCases\TC_DeleteAccount.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Contact.class
 com\ConvergeHub\TestCases\TC_AdvanceSearch.class

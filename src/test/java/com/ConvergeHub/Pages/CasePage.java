@@ -31,7 +31,7 @@ public class CasePage extends Base
 	public CasePage() 
 	{
 		PageFactory.initElements(driver, this);
-		log.debug("HomePage Initialized.");
+		log.debug("Case Page Initialized.");
 		//driver.switchTo().frame("case_comment_save_ifr");
 		//driver.findElement(By.cssSelector("body")).sendKeys("your data");
 	}
