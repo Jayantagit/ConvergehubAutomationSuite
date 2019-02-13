@@ -15,6 +15,7 @@ com\ConvergeHub\Pages\AccountPage.class
 com\ConvergeHub\Base\Base.class
 com\ConvergeHub\TestCases\TC_AddLead_QuickView.class
 com\ConvergeHub\Pages\ContactPage.class
+com\ConvergeHub\TestCases\TC_Billing.class
 com\ConvergeHub\TestCases\TC_Search_Deal.class
 com\ConvergeHub\Pages\LeadPage.class
 com\ConvergeHub\Utilities\MonitoringMail$1.class
@@ -37,6 +38,7 @@ com\ConvergeHub\TestCases\TC_AddTarget_Convert.class
 com\ConvergeHub\Utilities\ExtentManager.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent_Deal.class
 com\ConvergeHub\TestCases\TC_ScheduleEvent.class
+com\ConvergeHub\Pages\BillingPage.class
 com\ConvergeHub\TestCases\TC_Collaboration.class
 Rough\RoughOther.class
 com\ConvergeHub\TestCases\TC_ReferLead_AddToList.class
