@@ -187,10 +187,11 @@ public class TC_Billing extends Base
 	    {
 	    	 System.out.println(li.getText());
 	         li.click();
+	         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	         break;
 	       }
 	    }
-	    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+	    
 		
 		//------Select the Date from the Valid Till Date Picker	
 	    String Day=excel.getCellDataUpd("Billing","Day", 1);
@@ -215,11 +216,12 @@ public class TC_Billing extends Base
 			if(date.equalsIgnoreCase(Day))
 			{
 				ele.click();
+				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);	
 				break;
 			}
 			
 		}
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);	
+		
 		//------Enter the Terms & Conditions
 	    String TermsCondition=excel.getCellDataUpd("Billing","TermsCondition", 1);
 	    billing.TermsandCondition.sendKeys(TermsCondition);
@@ -318,10 +320,10 @@ public class TC_Billing extends Base
 	    WebDriverWait wait = new WebDriverWait (driver, 20);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
 	    
-	    ////Validation that Product edited successfully
+	    ////Validation that the Quotation edited successfully
 	    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Updated"));
 	 	    
-	}	
+}	
 	
 @Test(priority=4,groups={"Regression"},description="Create a New Invoice from Billing Module")
 
@@ -349,6 +351,9 @@ public static void CreateInvoice() throws InterruptedException
 	
     
     //===========Filled up the Add Invoice Screen=====================
+	//Save the Generated Invoice No in the Property File
+	String Invoice_No=billing.invNo.getText();
+	TestUtil.writeProperty("Invoice_No", Invoice_No);  
 	
 	//Select the Account Name
     billing.accountName.click();
@@ -478,6 +483,173 @@ public static void CreateInvoice() throws InterruptedException
 	String arr[]=baseurl.split("/");		
 	String Invoice_ID=arr[arr.length-1];
 	TestUtil.writeProperty("Invoice_ID", Invoice_ID);  
+    	
+}	
+
+@Test(priority = 5,groups={"Regression"},description="Edit a Invoice")
+
+public static void editInvoice() throws InterruptedException
+{
+	LeadPage lead=new LeadPage();
+	BillingPage billing=new BillingPage();
+	
+	/*-------------------------Login Code
+	LoginPage login=new LoginPage();		
+	login.username.clear();
+    login.username.sendKeys(config.getProperty("UserName"));
+	login.password.sendKeys(config.getProperty("Password"));
+    login.login.click();
+    System.out.println("Successfully Logged");
+    wait=new WebDriverWait(driver,20); 
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+     -------------------------------------------*/
+
+    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/invoices/add/"+SavedData.getProperty("Invoice_ID"));
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    
+    //--------------------Edit  the Invoice Quantity & rate----------------------------------------------------
+    
+    //Click the Details tab
+    driver.findElement(By.linkText("Details")).click();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    
+	    
+    //Enter the Quantity
+    billing.Quanitity.click();
+    billing.Quanitity.clear();
+    String Qunatitynew=excel.getCellDataUpd("Billing","QtyNew", 1);
+    billing.Quanitity.sendKeys(Qunatitynew);
+    
+    //Enter the Rate
+    billing.Rate.click();
+    billing.Rate.clear();
+    String RateNew=excel.getCellDataUpd("Billing","RateNew", 1);
+    billing.Rate.sendKeys(RateNew);
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+    //Click-Save Button
+    billing.btnSave.click();
+    
+    WebDriverWait wait = new WebDriverWait (driver, 20);
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
+    
+    ////Validation that Invoice edited successfully
+    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Updated"));
+ 	    
+}	
+
+@Test(priority=6,groups={"Regression"},description="Create a New Payment from Billing Module")
+
+public static void CreatePayment() throws InterruptedException
+{
+	//Initialize the Page Class
+	DealPage deal=new DealPage();
+	BillingPage billing=new BillingPage();
+
+/*-------------------------Login Code
+	LoginPage login=new LoginPage();
+	login.username.clear();
+    login.username.sendKeys(config.getProperty("UserName"));
+	login.password.sendKeys(config.getProperty("Password"));
+    login.login.click();
+    System.out.println("Successfully Logged");
+    wait=new WebDriverWait(driver,30); 
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));	
+    driver.get("https://staging.convergehub.com/targets/add");
+    -------------------------------------------*/
+    
+	//Redirecting to the Add Payment Page
+	driver.get("https://"+config.getProperty("Environment")+".convergehub.com/payments/add/");
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+    
+    //===========Filled up the Add Payment Screen=====================
+
+	//Select the Payment Mode
+	String mode=excel.getCellDataUpd("Billing","paymentMode", 1);
+	new Select(billing.paymentMode).selectByVisibleText(mode);
+	
+	//Enter the Originator Name
+	String Originator=excel.getCellDataUpd("Billing","Originator", 1);
+	billing.originatorNm.sendKeys(Originator);
+	
+	//Select the Currency ID
+	String CurrencyID=excel.getCellDataUpd("Billing","Currency_ID", 1);
+	new Select(billing.Currency_Id).selectByVisibleText(CurrencyID);
+	
+	//Enter the payment amount
+	String paymentAmt=excel.getCellDataUpd("Billing","Payment_amount", 1);
+	billing.paymentAmt.sendKeys(paymentAmt);
+	
+		
+	//------Select the Date from the-Payment Date Date Picker	
+    String payDay=excel.getCellDataUpd("Billing","payDay", 1);
+    String payMonth=excel.getCellDataUpd("Billing","payMonth", 1);
+    String payYear=excel.getCellDataUpd("Billing","payYear", 1);
+    
+    billing.paymentDate.click();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    new Select(billing.calMonth).selectByVisibleText(payMonth);
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    new Select(billing.calYear).selectByVisibleText(payYear);
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    
+    	//-------------For Selecting the Day
+	List<WebElement> allDatespayment=driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//td"));
+	
+	for(WebElement elepmt:allDatespayment)
+	{
+		
+		String datepayment=elepmt.getText();
+		System.out.println(datepayment);
+		if(datepayment.equalsIgnoreCase(payDay))
+		{
+			elepmt.click();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	
+			break;
+		}
+		
+	}
+	
+	//Set the Transaction ID
+	String TransId=excel.getCellDataUpd("Billing","Transaction_Id", 1);
+	billing.Transaction_id.sendKeys(TransId);
+	
+	//Select the RelatedTo as-Invoice
+	String RelatedTo=excel.getCellDataUpd("Billing","RelatedTo", 1);
+    new Select(billing.RelatedTo).selectByVisibleText(RelatedTo);
+    
+    //Wait for the appeariance of the Invoice popup
+    WebDriverWait waitpopup = new WebDriverWait (driver, 20);
+    waitpopup.until(ExpectedConditions.visibilityOf(billing.SelectInvDialog));
+    
+    //Click the Checkbox of the Invoice Selected earlier
+    driver.findElement(By.id("list_checkbox_"+SavedData.getProperty("Invoice_ID"))).click();
+    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    
+    //Enter the value in amount to be paid
+    String amtPaid=excel.getCellDataUpd("Billing","AmountPaid", 1);
+    driver.findElement(By.id("paid_"+SavedData.getProperty("Invoice_ID"))).sendKeys(amtPaid);
+    
+    //Click the Button-Add Selected
+    billing.AddSelectedbtn.click();
+    
+    //Wait for the save button-enabled
+    WebDriverWait waitSave = new WebDriverWait (driver, 20);
+    waitSave.until(ExpectedConditions.visibilityOf(billing.btnSavePayment));
+    billing.btnSavePayment.click();
+    
+    
+    //Assertion statement added for the verification
+    WebDriverWait waittasksave = new WebDriverWait (driver, 20);
+    waittasksave.until(ExpectedConditions.visibilityOf(deal.SuccessNotificationMsg));
+    
+    Assert.assertTrue(deal.SuccessNotificationMsg.getText().toString().contains("Payment Created"));
+    
+  	String  baseurl=driver.getCurrentUrl();
+	String arr[]=baseurl.split("/");		
+	String Payment_ID=arr[arr.length-1];
+	TestUtil.writeProperty("Payment_ID", Payment_ID);  
     	
 }	
 		

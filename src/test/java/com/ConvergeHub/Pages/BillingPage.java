@@ -63,11 +63,23 @@ public class BillingPage extends Base
 	@FindBy(id="invoice_date") public WebElement invoiceDate;//DatePicker
 	@FindBy(id="due_date") public WebElement dueDate;//DatePicker
 	@FindBy(id="status_select_drp_dwn") public WebElement invStatus ;//Select
-	
+	@FindBy(id="name") public WebElement invNo ;//Edit
 	
 	
 	//Payment-Elements
-	
+	@FindBy(id="payment_type_select_drp_dwn") public WebElement paymentMode;//Select
+	@FindBy(id="originator_name") public WebElement originatorNm;//Edit
+	@FindBy(id="currency_id_select_drp_dwn") public WebElement Currency_Id;//Select
+	@FindBy(id="payment_amount") public WebElement paymentAmt;//Edit
+	@FindBy(id="payment_date") public WebElement paymentDate;//DatePicker
+	@FindBy(id="transaction_id") public WebElement Transaction_id;//Edit
+	@FindBy(id="description") public WebElement Description;//Edit
+	@FindBy(id="relate_module_select_drp_dwn") public WebElement RelatedTo;//Select
+	@FindBy(xpath="//div[@class='ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable']") public WebElement SelectInvDialog;//Dialog
+	@FindBy(xpath="//button[@class='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']") public WebElement AddSelectedbtn;//Add Selected
+	@FindBy(xpath="//button[@id='accountValidation'and @type='submit']") public WebElement btnSavePayment;//Button
+	//---id=list_checkbox_5943064c-e313-2e3a-1ce0-5c651513b59a
+	//---id=paid_5943064c-e313-2e3a-1ce0-5c651513b59a
 	
 	
 	public BillingPage() 
