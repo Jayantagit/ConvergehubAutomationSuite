@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -229,8 +230,8 @@ public static void editPartner() throws InterruptedException
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
     
     ////Validation that Partner edited successfully
-    Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Updated");
-    
+    //Assert.assertEquals(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText(), "Updated");
+    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Updated"));
 }
 
 @Test(priority=3,groups={"Regression"},description="Mass Update for Partner")
@@ -292,9 +293,82 @@ public static void MassUpdateForPartner() throws InterruptedException
     WebDriverWait wait1 = new WebDriverWait (driver, 20);
     wait1.until(ExpectedConditions.visibilityOf(lead.HeaderNotificationMsg));
     
-    
+    //Add the Verification Point for Partner successfully updated
     Assert.assertTrue(lead.HeaderNotificationMsg.getText().toString().contains("Partner Updated"));
     
 }
+
+@Test(priority = 4,groups={"Regression"},description="Create New Notification")
+
+public static void CreateNotification() throws InterruptedException
+{	
+	LeadPage lead=new LeadPage();
+	AccountPage account=new AccountPage();
+	CollaborationPage clb=new CollaborationPage();
+	DealPage deal=new DealPage();
+	
+	/*-------------------------Login Code
+	LoginPage login=new LoginPage();
+	login.username.clear();
+    login.username.sendKeys(config.getProperty("UserName"));
+	login.password.sendKeys(config.getProperty("Password"));
+    login.login.click();
+    System.out.println("Successfully Logged");
+    wait=new WebDriverWait(driver,20); 
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='icon search-top']")));
+   driver.get("https://staging.convergehub.com/leads/add");
+	-------------------------------------------*/
+   
+	
+	driver.get("https://"+config.getProperty("Environment")+".convergehub.com/notifications/add/");
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	
+    
+    //===========Filled up the Add Notification Screen=====================
+    
+    //------Enter the Notification Subject
+    String NotificationSub=excel.getCellDataUpd("Collaboration", "NotificationSub", 1);	    
+    clb.notificationSubject.sendKeys(NotificationSub);
+    
+    //Select the Notify To-
+    clb.notifyTo.click();
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    String Notifynamefromexcel=excel.getCellDataUpd("Collaboration", "NotifyName", 1);	 
+    List<WebElement> notifyToList=driver.findElements(By.xpath("//div[@id='alls_tab_notify_to11']/ul/li/a//span[@class='float-left ellipsis_autosugest']"));
+    for(WebElement lst:notifyToList)
+    {
+    	String notifyToName=lst.getText();
+    	if(notifyToName.equalsIgnoreCase(Notifynamefromexcel))
+    	{
+    		lst.click();
+    		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    		break;
+    	}
+    	
+    	
+    }
+    
+	//------Enter the Notification Body
+    driver.switchTo().frame("message_ifr");
+    String notificationDescription=excel.getCellDataUpd("Collaboration", "DescriptionNotify", 1);
+    driver.findElement(By.cssSelector("body")).click();
+  	driver.findElement(By.cssSelector("body")).sendKeys(notificationDescription);
+  	driver.switchTo().defaultContent();
+  	
+  	
+    //Enter the Save Button
+	clb.btnnotificationSend.click();
+    
+    //Assertion statement added for the verification
+    WebDriverWait wait1 = new WebDriverWait (driver, 20);
+    wait1.until(ExpectedConditions.visibilityOf(deal.SuccessNotificationMsg));
+    
+    //Verification Statement added for Notification Send
+     Assert.assertTrue(deal.SuccessNotificationMsg.getText().toString().contains("Notification Created"));
+    	
+
+}
+
       
 }

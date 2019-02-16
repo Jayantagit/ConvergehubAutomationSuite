@@ -652,5 +652,57 @@ public static void CreatePayment() throws InterruptedException
 	TestUtil.writeProperty("Payment_ID", Payment_ID);  
     	
 }	
+
+@Test(priority = 7,groups={"Regression"},description="Edit a Payment")
+
+public static void editPayment() throws InterruptedException
+{
+	LeadPage lead=new LeadPage();
+	BillingPage billing=new BillingPage();
+	
+	/*-------------------------Login Code
+	LoginPage login=new LoginPage();		
+	login.username.clear();
+    login.username.sendKeys(config.getProperty("UserName"));
+	login.password.sendKeys(config.getProperty("Password"));
+    login.login.click();
+    System.out.println("Successfully Logged");
+    wait=new WebDriverWait(driver,20); 
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+     -------------------------------------------*/
+
+    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/payments/add/"+SavedData.getProperty("Payment_ID"));
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    
+    //--------------------Edit  the Payment Mode/Originator Name & Description----------------------------------------------------
+    
+    //Update-Payment Mode
+  	String modeupd=excel.getCellDataUpd("Billing","EdtMode", 1);
+  	new Select(billing.paymentMode).selectByVisibleText(modeupd);
+  	
+  	//Update the Originator Name
+  	String OriginatorUpd=excel.getCellDataUpd("Billing","EdtOriginator", 1);
+  	billing.originatorNm.sendKeys(OriginatorUpd);  	
+  	
+  	//Update the payment amount
+  	String paymentAmtUpd=excel.getCellDataUpd("Billing","EdtPayment_amount", 1);
+  	billing.paymentAmt.clear();
+  	billing.paymentAmt.sendKeys(paymentAmtUpd);
+  	
+ 	//Update  payment Description
+  	String paymentdesc=excel.getCellDataUpd("Billing","EdtDescription", 1);
+  	billing.Description.clear();
+  	billing.Description.sendKeys(paymentdesc);
+  	
+  	//Click-Save Button
+  	billing.btnSavePayment.click();
+    
+    WebDriverWait wait = new WebDriverWait (driver, 20);
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
+    
+    ////Validation that Payment  edited successfully
+    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Updated"));
+ 	    
+}	
 		
 }

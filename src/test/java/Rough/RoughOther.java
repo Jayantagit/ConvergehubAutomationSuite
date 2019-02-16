@@ -2,8 +2,10 @@ package Rough;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.ConvergeHub.Base.Base;
 
@@ -30,7 +32,14 @@ public class RoughOther extends Base
 			        }
 			    }
 			    
-	   */			
+	   */	
+		
+	    List<WebElement> notifyToList=driver.findElements(By.xpath("//div[@id='alls_tab_notify_to11']/ul/li/a"));
+	    for(WebElement lst:notifyToList)
+	    {
+	    	String notifyToName=lst.getText();
+	    	System.out.println(notifyToName);
+	    }
 	
 	}
 }

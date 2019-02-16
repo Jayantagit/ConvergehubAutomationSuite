@@ -20,6 +20,13 @@ public class CollaborationPage extends Base
 	@FindBy(id="domfield_type_select_drp_dwn") public WebElement massupdpartnerType;//Select
 	@FindBy(id="domfield_relation_select_drp_dwn") public WebElement massupdRelationship;//Select
 	
+	//Notifcation screen
+	@FindBy(id="subject") public WebElement notificationSubject;//Edit
+	@FindBy(xpath="//button[@id='notificationValidationButton' and @type='submit']") public WebElement btnnotificationSend;//Button
+	@FindBy(id="notify_to11_field") public WebElement notifyTo;//Edit
+	@FindBy(xpath="//div[@id='alls_tab_notify_to11']/ul/li/a//span[@class='float-left ellipsis_autosugest']") public WebElement notifyNmList;
+	
+
 	
 	public CollaborationPage() 
 	{
