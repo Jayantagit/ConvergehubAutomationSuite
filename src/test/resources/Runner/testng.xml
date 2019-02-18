@@ -94,9 +94,8 @@
  <test  name="Collaboration Test Cases" group-by-instances="true">
  <classes> 
   <!--Collaboration Module Test Cases        -->
-   
-        <class name="com.ConvergeHub.TestCases.TC_Collaboration"/> 
-   <!--     
+   <!-- 
+        <class name="com.ConvergeHub.TestCases.TC_Collaboration"/>        
     -->       
   </classes>
   </test> <!-- Test -->  
@@ -104,8 +103,7 @@
  <test  name="Activities Test Cases" group-by-instances="true">
  <classes> 
   <!--Activity Module Test Cases        -->
-   <!--
-    
+   <!--    
         <class name="com.ConvergeHub.TestCases.TC_Activities"/> 
    -->       
   </classes>
@@ -117,6 +115,16 @@
    <!--
         <class name="com.ConvergeHub.TestCases.TC_Billing"/> 
     -->       
+  </classes>
+</test> <!-- Test -->  
+
+ <test  name="Tools Test Cases" group-by-instances="true">
+ <classes> 
+  <!--Tool Module Test Cases        -->
+   <!--
+    -->
+        <class name="com.ConvergeHub.TestCases.TC_Tools"/> 
+          
   </classes>
 </test> <!-- Test -->  
   
