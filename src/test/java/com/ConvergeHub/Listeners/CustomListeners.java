@@ -24,8 +24,9 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 {
 	//public 	String messageBody;
 	
-	public void onFinish(ISuite arg0) 
+	public void onFinish(ISuite suite) 
 	{
+		log.debug(suite.getName().toUpperCase()+" Suite Finished");
 		/*---------------To Trigger the Jenkins Job
 		MonitoringMail mail = new MonitoringMail();
 		 
@@ -50,9 +51,9 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 		//SendEmail.sendEmail();
 	}
 
-	public void onStart(ISuite arg0) 
+	public void onStart(ISuite suite) 
 	{
-		
+		log.debug(suite.getName().toUpperCase()+" Suite Started");
 		
 	}
 
@@ -105,7 +106,7 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 
 	public void onTestStart(ITestResult result) 
 	{
-		
+		log.debug(result.getName().toUpperCase()+" Started");
 		test=rep.createTest(result.getName());
 		
 	}
@@ -117,6 +118,7 @@ public class CustomListeners extends Base implements ITestListener,ISuiteListene
 		try 
 		{
 			//Date d=new Date();
+			//test.pass("Screen Shot : " + test.addScreenCaptureFromPath(TestUtil.captureScreenshot()));
 			test.pass("Screen Shot : " + test.addScreenCaptureFromPath(TestUtil.captureScreenshot()));
 			Reporter.log("<a target=\"_blank\" href=\""+TestUtil.captureScreenshot()+"\">Screenshot</a>");
 			System.out.println("<a target=\"_blank\" href=\""+TestUtil.captureScreenshot()+"\">Screenshot</a>");

@@ -2,9 +2,11 @@ com\ConvergeHub\Pages\TargetPage.class
 com\ConvergeHub\Pages\DealPage.class
 com\ConvergeHub\TestCases\TC_AddAccount_QuickView.class
 com\ConvergeHub\TestCases\TC_MergeDuplicate_Account.class
+com\ConvergeHub\Pages\MarketingPage.class
 com\ConvergeHub\TestCases\TC_AddCommentandNoteToContact.class
 com\ConvergeHub\Pages\CasePage.class
 com\ConvergeHub\TestCases\TC_AddContacts.class
+com\ConvergeHub\TestCases\TC_Marketing.class
 com\ConvergeHub\TestCases\TC_ConvertLead.class
 com\ConvergeHub\TestCases\TC_Task_Comments_Notes_Event_List_ForAccount.class
 com\ConvergeHub\Utilities\MonitoringMail.class
