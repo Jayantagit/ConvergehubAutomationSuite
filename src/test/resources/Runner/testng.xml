@@ -119,6 +119,11 @@
 </test> <!-- Test -->  
 
  <test  name="Tools Test Cases" group-by-instances="true">
+ <groups>	
+	<run>	
+   		<include name="Regression" />	
+    </run>	
+ </groups>	
  <classes> 
   <!--Tool Module Test Cases        -->
    <!--
