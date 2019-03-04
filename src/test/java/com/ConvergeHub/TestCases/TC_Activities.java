@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -369,5 +370,105 @@ public class TC_Activities extends Base
 	   
 	    
 	}
+	
+	@Test(priority = 6,groups={"Regression"},description="Create a Tag under Activity Module")
+
+	public static void tagCreation() throws InterruptedException
+	{
+		LeadPage lead=new LeadPage();
+		AccountPage account=new AccountPage();
+		CollaborationPage clb=new CollaborationPage();
+		ActivitiesPage activities=new ActivitiesPage();
+		
+		/*-------------------------Login Code
+		LoginPage login=new LoginPage();		
+		login.username.clear();
+	    login.username.sendKeys(config.getProperty("UserName"));
+		login.password.sendKeys(config.getProperty("Password"));
+	    login.login.click();
+	    System.out.println("Successfully Logged");
+	    wait=new WebDriverWait(driver,20); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+	     -------------------------------------------*/
+
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/tags/add/");
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    
+	    //Enter the Tag Name
+	    String tagName=excel.getCellDataUpd("Activities","tagName", 1);
+	    activities.tagName.sendKeys(tagName);
+	    
+	    //Click the New Link
+	    driver.findElement(By.linkText("+New")).click();
+	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	    
+	    
+	    //Enter the Tag Category
+	    String tagCategory=excel.getCellDataUpd("Activities","tagCategory", 1);
+	    activities.tagCategory.sendKeys(tagCategory);
+	           
+	    //Click the Save button after Editing
+	    activities.tagSavebtn.click();
+	    
+	    WebDriverWait wait = new WebDriverWait (driver, 20);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
+	    
+	    ////Validation that Tag Created successfully
+	    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Created"));
+	   
+	    
+	}
+	
+	@Test(priority = 7,groups={"Regression"},description="Send Email from Activity Module")
+
+	public static void sendEmail() throws InterruptedException
+	{
+		LeadPage lead=new LeadPage();
+		AccountPage account=new AccountPage();
+		CollaborationPage clb=new CollaborationPage();
+		ActivitiesPage activities=new ActivitiesPage();
+		
+		/*-------------------------Login Code
+		LoginPage login=new LoginPage();		
+		login.username.clear();
+	    login.username.sendKeys(config.getProperty("UserName"));
+		login.password.sendKeys(config.getProperty("Password"));
+	    login.login.click();
+	    System.out.println("Successfully Logged");
+	    wait=new WebDriverWait(driver,20); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'My Dashboard')]")));
+	     -------------------------------------------*/
+
+	    driver.get("https://"+config.getProperty("Environment")+".convergehub.com/emails/add/");
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    
+	    //Enter the First Email Address
+	    String emailSendToFirst=excel.getCellDataUpd("Activities","emailSendToFirst", 1);
+	    activities.emailSendToFirst.sendKeys(emailSendToFirst);
+	    activities.emailSendToFirst.sendKeys(Keys.TAB);
+	    
+	    //Enter the EmailSubject
+	    String emailSubject=excel.getCellDataUpd("Activities","emailSubject", 1);
+	    activities.emailSubject.sendKeys(emailSubject);
+	     
+	  //------Enter the Email subject
+	    driver.switchTo().frame("body_html_content_ifr");
+	    String emailBody=excel.getCellDataUpd("Activities","emailBody", 1);
+	  	driver.findElement(By.cssSelector("body")).clear();
+	  	driver.findElement(By.cssSelector("body")).sendKeys(emailBody);
+	  	driver.switchTo().defaultContent();
+	    
+	  //Click the Save button 
+	    activities.emailSendBtn.click();
+	    
+	    WebDriverWait wait = new WebDriverWait (driver, 20);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='header_notification_msg']")));
+	    
+	    ////Validation that Email Send successfully
+	    Assert.assertTrue(driver.findElement(By.xpath("//span[@id='header_notification_msg']")).getText().contains("Your message has been sent"));
+	   
+	    
+	}
+	
 	
 }

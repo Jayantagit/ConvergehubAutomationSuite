@@ -28,7 +28,17 @@ public class ActivitiesPage extends Base
 	@FindBy(id="subject") public WebElement noteSubject;//Edit
 	@FindBy(xpath="//button[@class='button fresh_green save_button_from_module_add']") public WebElement btnNoteSave;//Button
 	
+	//Tags-Elements
+	@FindBy(id="name") public WebElement tagName;//Edit
+	//Link-Text-+New
+	@FindBy(id="category_auto") public WebElement tagCategory;//Edit
+	@FindBy(xpath="//button[@id='accountValidation' and @type='submit']") public WebElement tagSavebtn;//Button
 	
+	//Email-Elements
+	@FindBy(xpath="//ul[@id='sendTo']/li[@id='select3_annoninput']/input[@id='select3_maininput']") public WebElement emailSendToFirst;//li
+	@FindBy(id="subject") public WebElement emailSubject;//Edit
+	//Frame id-body_html_content_ifr
+	@FindBy(xpath="//input[@class='button fresh_green' and @value='Send']") public WebElement emailSendBtn;//Button
 	
 	public ActivitiesPage() 
 	{
