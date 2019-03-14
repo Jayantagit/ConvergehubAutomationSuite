@@ -104,9 +104,9 @@
  <classes> 
   <!--Activity Module Test Cases        -->
    <!--  
-   -->   
+   
         <class name="com.ConvergeHub.TestCases.TC_Activities"/> 
-         
+     -->       
   </classes>
 </test> <!-- Test -->  
 
@@ -137,10 +137,10 @@
  <test  name="Marketing Test Cases" group-by-instances="true">
  <classes> 
   <!--Marketing Module Test Cases        -->
-   <!--
+  
    
         <class name="com.ConvergeHub.TestCases.TC_Marketing"/> 
-   -->    
+     
           
   </classes>
 </test> <!-- Test --> 

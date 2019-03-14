@@ -3,6 +3,7 @@ package com.ConvergeHub.TestCases;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -25,9 +26,9 @@ import com.ConvergeHub.Utilities.TestUtil;
 
 public class TC_Marketing extends Base  
 {    
-	@Test(priority=0,groups={"Regression"},description="Create a New Template")
+	@Test(priority=0,groups={"Regression"},description="Create a New Template",dataProviderClass=TestUtil.class,dataProvider="dp")
 	
-	public static void templateCreation() throws InterruptedException
+	public static void templateCreation(Hashtable<String,String> data) throws InterruptedException
 	{
 		//Initialize the Page Class
 		DealPage deal=new DealPage();
@@ -55,16 +56,19 @@ public class TC_Marketing extends Base
 	    //===========Filled up the Add Template Screen=====================
 		
 		//------Enter the Template Name		
-	    String templateName=excel.getCellDataUpd("Marketing","TemplateName", 1);
+	   // String templateName=excel.getCellDataUpd("Marketing","TemplateName", 1);
+		String templateName=data.get("TemplateName");
 	    mp.templateName.sendKeys(templateName);
 	    
 		//------Enter the Template Subject	
-	    String templateSubject=excel.getCellDataUpd("Marketing","TemplateSubject", 1);
+	   // String templateSubject=excel.getCellDataUpd("Marketing","TemplateSubject", 1);
+	    String templateSubject=data.get("TemplateSubject");
 	    mp.Subject.sendKeys(templateSubject);	    
    
 		//------Enter the Template Body
 	    driver.switchTo().frame("body_html_ifr");
-	    String templateBody=excel.getCellDataUpd("Marketing", "TemplateBody", 1);
+	    //String templateBody=excel.getCellDataUpd("Marketing", "TemplateBody", 1);
+	    String templateBody=data.get("TemplateBody");
 	  	driver.findElement(By.cssSelector("body")).sendKeys(templateBody);
 	  	driver.switchTo().defaultContent();
 	    
