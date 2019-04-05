@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[<a target="_blank" href="D:\AutomationTestScripts\Workspace\target\surefire-reports\html\Sat_Mar_02_15_42_23_IST_2019.jpg">Screenshot</a>]]>
+      <![CDATA[<a target="_blank" href="D:\AutomationTestScripts\Workspace\target\surefire-reports\html\Tue_Mar_19_16_26_11_IST_2019.jpg">Screenshot</a>]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="38359" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:12:25Z">
+  <suite name="Suite" duration-ms="46321" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:56:12Z">
     <groups>
       <group name="Regression">
-        <method signature="TC_Marketing.templateCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@639c2c1d]" name="templateCreation" class="com.ConvergeHub.TestCases.TC_Marketing"/>
+        <method signature="TC_Marketing.templateCreation(java.util.Hashtable)[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@33d512c1]" name="templateCreation" class="com.ConvergeHub.TestCases.TC_Marketing"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Lead Test Cases" duration-ms="63" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Lead Test Cases" duration-ms="35" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Lead Test Cases -->
-    <test name="Deal Test Cases" duration-ms="1" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Deal Test Cases" duration-ms="1" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Deal Test Cases -->
-    <test name="Contact Test Cases" duration-ms="1" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Contact Test Cases" duration-ms="1" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Contact Test Cases -->
-    <test name="Target Test Cases" duration-ms="5" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Target Test Cases" duration-ms="2" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Target Test Cases -->
-    <test name="Account Test Cases" duration-ms="1" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Account Test Cases" duration-ms="11" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Account Test Cases -->
-    <test name="Service Test Cases" duration-ms="1" started-at="2019-03-02T10:11:46Z" finished-at="2019-03-02T10:11:46Z">
+    <test name="Service Test Cases" duration-ms="1" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Service Test Cases -->
-    <test name="Collaboration Test Cases" duration-ms="1" started-at="2019-03-02T10:11:47Z" finished-at="2019-03-02T10:11:47Z">
+    <test name="Collaboration Test Cases" duration-ms="6" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Collaboration Test Cases -->
-    <test name="Activities Test Cases" duration-ms="1" started-at="2019-03-02T10:11:47Z" finished-at="2019-03-02T10:11:47Z">
+    <test name="Activities Test Cases" duration-ms="1" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Activities Test Cases -->
-    <test name="Billing Test Cases" duration-ms="3" started-at="2019-03-02T10:11:47Z" finished-at="2019-03-02T10:11:47Z">
+    <test name="Billing Test Cases" duration-ms="1" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Billing Test Cases -->
-    <test name="Tools Test Cases" duration-ms="4" started-at="2019-03-02T10:11:47Z" finished-at="2019-03-02T10:11:47Z">
+    <test name="Tools Test Cases" duration-ms="0" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:55:26Z">
     </test> <!-- Tools Test Cases -->
-    <test name="Marketing Test Cases" duration-ms="37857" started-at="2019-03-02T10:11:47Z" finished-at="2019-03-02T10:12:25Z">
+    <test name="Marketing Test Cases" duration-ms="45941" started-at="2019-03-19T10:55:26Z" finished-at="2019-03-19T10:56:12Z">
       <class name="com.ConvergeHub.TestCases.TC_Marketing">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@639c2c1d]" name="setUp" is-config="true" duration-ms="54738" started-at="2019-03-02T10:10:51Z" finished-at="2019-03-02T10:11:46Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@33d512c1]" name="setUp" is-config="true" duration-ms="76090" started-at="2019-03-19T10:54:10Z" finished-at="2019-03-19T10:55:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="templateCreation()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@639c2c1d]" name="templateCreation" duration-ms="35964" started-at="2019-03-02T10:11:47Z" description="Create a New Template" finished-at="2019-03-02T10:12:23Z">
+        <test-method status="PASS" signature="templateCreation(java.util.Hashtable)[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@33d512c1]" name="templateCreation" duration-ms="43776" started-at="2019-03-19T10:55:26Z" description="Create a New Template" data-provider="dp" finished-at="2019-03-19T10:56:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TemplateName=Test, TemplateSubject=Test Template, TemplateBody=Test Template, =}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
-              <![CDATA[<a target="_blank" href="D:\AutomationTestScripts\Workspace\target\surefire-reports\html\Sat_Mar_02_15_42_23_IST_2019.jpg">Screenshot</a>]]>
+              <![CDATA[<a target="_blank" href="D:\AutomationTestScripts\Workspace\target\surefire-reports\html\Tue_Mar_19_16_26_11_IST_2019.jpg">Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- templateCreation -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@639c2c1d]" name="TearDown" is-config="true" duration-ms="8195" started-at="2019-03-02T10:12:25Z" finished-at="2019-03-02T10:12:33Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:com.ConvergeHub.TestCases.TC_Marketing@33d512c1]" name="TearDown" is-config="true" duration-ms="7038" started-at="2019-03-19T10:56:12Z" finished-at="2019-03-19T10:56:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

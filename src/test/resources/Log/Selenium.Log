@@ -1,54 +1,15 @@
-17:18:25,736 DEBUG rootLogger:56 - SUITE Suite Started
-17:18:25,764 DEBUG rootLogger:70 - Config File Loaded
-17:18:25,779 DEBUG rootLogger:93 - OR File Loaded
-17:19:30,673 DEBUG rootLogger:18 - Login Page Initialized.
-17:19:50,603 DEBUG rootLogger:109 - TEMPLATECREATION Started
-17:19:50,648 DEBUG rootLogger:43 - Deal Page Initialized.
-17:19:50,684 DEBUG rootLogger:34 - Case Page Initialized.
-17:19:50,709 DEBUG rootLogger:25 - Marketing Page Initialized.
-17:20:30,294 DEBUG cache:45 - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:30,295 DEBUG cache:45 - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
-17:20:30,301 DEBUG cache:45 - TemplateLoader.findTemplateSource("index.ftl"): Found
-17:20:30,324 DEBUG cache:45 - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
-17:20:30,981 DEBUG cache:45 - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:30,982 DEBUG cache:45 - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
-17:20:30,982 DEBUG cache:45 - TemplateLoader.findTemplateSource("head.ftl"): Found
-17:20:30,983 DEBUG cache:45 - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
-17:20:31,002 DEBUG cache:45 - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,003 DEBUG cache:45 - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
-17:20:31,003 DEBUG cache:45 - TemplateLoader.findTemplateSource("nav.ftl"): Found
-17:20:31,004 DEBUG cache:45 - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
-17:20:31,084 DEBUG cache:45 - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,085 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
-17:20:31,085 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
-17:20:31,087 DEBUG cache:45 - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
-17:20:31,112 DEBUG cache:45 - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,117 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
-17:20:31,118 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
-17:20:31,122 DEBUG cache:45 - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
-17:20:31,146 DEBUG cache:45 - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,146 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
-17:20:31,147 DEBUG cache:45 - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
-17:20:31,148 DEBUG cache:45 - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
-17:20:31,189 DEBUG cache:45 - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,190 DEBUG cache:45 - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
-17:20:31,190 DEBUG cache:45 - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
-17:20:31,193 DEBUG cache:45 - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
-17:20:31,228 DEBUG cache:45 - Couldn't find template in cache for "author-view/author-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,229 DEBUG cache:45 - TemplateLoader.findTemplateSource("author-view/author-view_en.ftl"): Not found
-17:20:31,230 DEBUG cache:45 - TemplateLoader.findTemplateSource("author-view/author-view.ftl"): Found
-17:20:31,230 DEBUG cache:45 - Loading template for "author-view/author-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/author-view/author-view.ftl"
-17:20:31,234 DEBUG cache:45 - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,235 DEBUG cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
-17:20:31,236 DEBUG cache:45 - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
-17:20:31,236 DEBUG cache:45 - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
-17:20:31,240 DEBUG cache:45 - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,240 DEBUG cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
-17:20:31,241 DEBUG cache:45 - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
-17:20:31,241 DEBUG cache:45 - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
-17:20:31,250 DEBUG cache:45 - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
-17:20:31,251 DEBUG cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
-17:20:31,252 DEBUG cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
-17:20:31,252 DEBUG cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/sunit/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"
-17:20:36,256 DEBUG rootLogger:248 - Driver Closed
-17:20:36,256 DEBUG rootLogger:29 - SUITE Suite Finished
+16:36:09,846 DEBUG rootLogger:56 - SUITE Suite Started
+16:36:09,863 DEBUG rootLogger:70 - Config File Loaded
+16:36:09,865 DEBUG rootLogger:93 - OR File Loaded
+16:36:15,121 DEBUG rootLogger:83 - TEMPLATECREATIONFailed
+16:36:15,138 ERROR rootLogger:49 - Issue with taking screenshot: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'SUNIT-PC', ip: '10.10.10.55', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\sunit\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55148}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 761ccb981ff9fb268b153e509f4b7f62
+16:36:15,168 DEBUG rootLogger:29 - SUITE Suite Finished
