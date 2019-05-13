@@ -89,7 +89,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <artifactId>ashot</artifactId>
     <version>1.5.3</version>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng -->
+<dependency>
+    <groupId>org.apache.maven.surefire</groupId>
+    <artifactId>surefire-testng</artifactId>
+    <version>2.22.1</version>
+</dependency>
 	
 </dependencies>
  <properties>
